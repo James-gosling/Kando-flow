@@ -1,10 +1,10 @@
 # Documento de Visión del Producto
 
-**Proyecto:** Zanshin Bushidō (`zanshin-bushido`)  
-**Subtítulo / Concepto:** Autonomous Deal Desk & Delivery Cockpit  
-**Autor:** Rodrigo Valdespino Vértiz  
-**Versión:** 2.0
-**Fecha:** septiembre de 2026  
+**Proyecto:** KandoFlow (`kandoflow`) 
+**Subtítulo / Concepto:** Autonomous Deal Desk & Delivery Cockpit 
+**Autor:** Rodrigo Valdespino Vértiz 
+**Versión:** 2.0 
+**Fecha:** 20 de septiembre de 2026 
 **Materia:** Ingeniería de Software (SIS3407)  
 
 ---
@@ -12,37 +12,37 @@
 ## 1. Descripción del Sistema
 
 ### 1.1 Nombre del Sistema
-**Zanshin Bushidō** (Nombre del repositorio: `zanshin-bushido`).
+**KandoFlow** (Nombre del repositorio: `kandoflow`).
 
 ### 1.2 Propósito y Resumen Ejecutivo
-Zanshin Bushidō es un sistema web transaccional y estación de trabajo operativa local-first diseñada para blindar, estructurar y acelerar el ciclo completo de ventas y entrega de vehículos de una asesora comercial en una concesionaria automotriz Mazda. El software actúa como un escudo operativo frente a la fragmentación interna y la falta de soporte interdepartamental de la agencia, unificando desde el primer contacto del cliente en piso o digital hasta la ceremonia técnica de entrega en sala de entregas (*Mazda Handover Experience*). 
+KandoFlow es un sistema web transaccional y estación de trabajo operativa local-first concebida para blindar, estructurar y acelerar el ciclo completo de ventas y entrega de vehículos de una asesora comercial dentro de una concesionaria automotriz Mazda. El software actúa como un escudo operativo frente a la fragmentación de canales y la falta de soporte interdepartamental en la agencia, unificando desde el primer contacto del cliente en piso o digital hasta la ceremonia técnica de entrega en sala de entregas (*Mazda Handover Experience*).
 
-El sistema normaliza archivos desestructurados (fotografías de identificaciones oficiales, estados de cuenta bancarios en PDF, catálogos en Excel) convirtiéndolos en esquemas planos y ultraligeros (`JSON`, `CSV`, `TXT`) para procesamiento en memoria sin latencia. Con estos datos normalizados, automatiza la pre-carga, modificación y generación de la documentación requerida por la financiera y la distribuidora en formatos Word (`.docx`), Excel (`.xlsx`) y PDF listos para firma física o digital, garantizando la persistencia soberana local y su sincronización estructurada hacia el entorno Google Workspace Enterprise de la asesora.
+El sistema normaliza archivos desestructurados (fotografías móviles de identificaciones oficiales, estados de cuenta bancarios en PDF, catálogos en hojas de cálculo Excel) transformándolos en esquemas planos y ultraligeros (`JSON`, `CSV`, `TXT`) para su procesamiento en memoria del navegador sin latencia. Con estos datos normalizados, automatiza la pre-carga, modificación y generación de la documentación requerida por la financiera y la distribuidora en formatos Word (`.docx`), Excel (`.xlsx`) y PDF listos para firma física o digital, garantizando la persistencia soberana local y su sincronización estructurada hacia el entorno corporativo Google Workspace Enterprise de la asesora.
 
 ---
 
 ## 2. El Problema y los Usuarios
 
 ### 2.1 Declaración del Problema (Problem Statement)
-* **El problema de:** Dispersión crítica de información, cuellos de botella administrativos internos, lentitud en el cálculo financiero y desorganización en el armado de expedientes y ceremonias de entrega.
+* **El problema de:** Dispersión crítica de prospectos en canales no integrados, demoras operativas en el cálculo de financiamiento, desorganización en el armado de expedientes crediticios y descoordinación en el protocolo de entrega física de vehículos.
 * **Afecta a:** La asesora de ventas, los clientes compradores y el administrador técnico del sistema.
-* **El impacto es:** Pérdida de ventas ante competidores por demoras operativas (>4 horas en primer contacto), rechazo de solicitudes en mesa de control por inconsistencia documental, riesgo legal por manejo desprotegido de datos bancarios en WhatsApp, y fricción en la entrega física por desalineación entre áreas de detallado, inspección (PDI) y ventas.
-* **Una solución exitosa sería:** Una plataforma web transaccional desacoplada que capture prospectos multicanal, genere cotizaciones paramétricas en segundos, audite automáticamente los documentos del expediente, orqueste el checklist de inspección y entrega de la unidad, y exporte paquetes documentales completos sin depender de la asistencia de áreas intermedias.
+* **El impacto es:** Pérdida de ventas ante marcas competidoras por tiempos de respuesta prolongados (>4 horas), rechazo de solicitudes en mesa de control por documentación incompleta o ilegible, riesgos de cumplimiento legal por manejo desprotegido de datos bancarios en mensajería personal, y fricción en la entrega física por desalineación con talleres y áreas de detallado.
+* **Una solución exitosa sería:** Una estación web transaccional móvil desacoplada que capture prospectos multicanal, genere cotizaciones paramétricas en segundos, audite automáticamente los documentos obligatorios del expediente, orqueste el checklist secuencial de inspección y entrega de la unidad, y exporte paquetes documentales completos sin depender de la asistencia de áreas intermedias.
 
 ### 2.2 Proceso Actual (As-Is)
-La asesora de ventas gestiona leads entrantes de manera desarticulada mediante libretas físicas y chats de WhatsApp. Los clientes acuden a piso sin cita previa o fuera del horario programado, solicitando cotizaciones complejas mientras la asesora debe consultar hojas de cálculo pesadas en terminales fijas. La documentación sensible (INE, nóminas, comprobantes fiscales) se almacena mezclada en la galería de su teléfono. En la fase de entrega, la coordinación con el área técnica de inspección (PDI) y detallado/lavado se realiza de palabra, derivando en demoras durante la entrega, omisiones en la configuración tecnológica del vehículo (Mazda Connect, MyMazda) y retrabajos administrativos.
+La asesora de ventas gestiona leads entrantes de manera desarticulada mediante libretas físicas y chats de WhatsApp. Los clientes acuden a piso sin cita previa o fuera del horario agendado, solicitando corridas financieras complejas mientras la asesora debe consultar hojas de cálculo pesadas o catálogos desactualizados en terminales fijas de escritorio. La documentación sensible (INE, nóminas, comprobantes fiscales) se almacena dispersa en la galería del móvil. En la fase de entrega, la coordinación con el área técnica de inspección (PDI) y detallado/lavado se realiza de manera verbal, derivando en demoras durante la entrega, omisiones en la configuración tecnológica del vehículo (Mazda Connect, MyMazda) y retrabajos administrativos.
 
 ### 2.3 Matriz de Usuarios del Sistema
-El sistema define explícitamente tres perfiles de usuario con privilegios, interfaces y responsabilidades diferenciadas:
+El sistema define formalmente tres perfiles de usuario con privilegios, interfaces y responsabilidades diferenciadas:
 
 | Tipo de Usuario | Rol y Descripción | Necesidades Principales en el Sistema | Preocupaciones y Riesgos |
 | :--- | :--- | :--- | :--- |
-| **Usuario Administrador (Rodrigo)** | Responsable técnico de arquitectura, pruebas de integración, despliegue, monitoreo de esquemas de datos y mantenimiento preventivo. | • Configuración de esquemas de extracción (`JSON`/`CSV`) y plantillas Office/PDF.<br>• Acceso a bitácoras transaccionales de sincronización y diagnóstico de errores.<br>• Pruebas de estrés y validación de atributos de calidad. | • Introducción de errores o regresiones que bloqueen la operación en piso de venta.<br>• Incompatibilidad de formatos binarios o ruptura de tokens con Google Workspace.<br>• Violaciones de integridad en la persistencia local. |
-| **Usuario Asesora de Ventas (Erika)** | Usuario operativo principal que atiende al cliente, realiza el perfilamiento comercial, calcula esquemas financieros y conduce la entrega física. | • Registro de clientes y prospectos en menos de 30 segundos.<br>• Cotizador paramétrico funcional en móvil en menos de 45 segundos.<br>• Ingestión y auditoría visual de documentos en formatos Office/PDF.<br>• Checklist interactivo para la ejecución del Handover SOP (Fases 1 a 5). | • Perder ventas o credibilidad por interfaces lentas o congelamientos en piso de venta.<br>• Rechazo de expedientes por parte de la mesa de control crediticio.<br>• Depender de áreas internas indiferentes para verificar el estado de la unidad. |
-| **Usuario Cliente / Prospecto** | Comprador del vehículo que interactúa directa o indirectamente con los entregables del sistema (cotizaciones, carga de archivos, firma y entrega). | • Recepción de cotizaciones transparentes y formateadas vía WhatsApp.<br>• Proceso ágil y digno de recepción y firma documental sin tiempos muertos.<br>• Entrega ceremonial del auto con explicación exhaustiva de sistemas de seguridad y confort (*Jinba Ittai*). | • Falta de transparencia en costos, plazos o tasas de interés.<br>• Filtración o mal uso de sus documentos fiscales y bancarios sensibles.<br>• Defectos estéticos no reportados en la unidad o entrega apresurada sin configuración digital. |
+| **Usuario Administrador (Rodrigo Valdespino Vértiz)**| Responsable técnico de arquitectura, pruebas de integración, despliegue, monitoreo de esquemas de datos y mantenimiento preventivo. | • Configuración de esquemas de extracción (`JSON`/`CSV`) y plantillas Office/PDF.<br>• Acceso a bitácoras transaccionales de sincronización y diagnóstico de errores.<br>• Pruebas de estrés y validación de atributos de calidad. | • Introducción de errores o regresiones que bloqueen la operación en piso de venta.<br>• Incompatibilidad de formatos binarios o ruptura de tokens con Google Workspace.<br>• Violaciones de integridad en la persistencia local. |
+| **Usuario Asesora de Ventas (Erika Vertiz)**| Usuaria operativa principal que atiende al cliente, realiza el perfilamiento comercial, calcula esquemas financieros y conduce la entrega física. | • Registro de clientes y prospectos en menos de 30 segundos.<br>• Cotizador paramétrico funcional en móvil en menos de 45 segundos.<br>• Ingestión y auditoría visual de documentos en formatos Office/PDF.<br>• Checklist interactivo para la ejecución del Handover SOP (Fases 1 a 5). | • Perder ventas o credibilidad por interfaces lentas o congelamientos en piso de venta.<br>• Rechazo de expedientes por parte de la mesa de control crediticio.<br>• Depender de áreas internas indiferentes para verificar el estado de la unidad. |
+| **Usuario Cliente / Prospecto**| Comprador del vehículo que interactúa directa o indirectamente con los entregables del sistema (cotizaciones, carga de archivos, firma y entrega). | • Recepción de cotizaciones transparentes y formateadas vía WhatsApp.<br>• Proceso ágil y digno de recepción y firma documental sin tiempos muertos.<br>• Entrega ceremonial del auto con explicación exhaustiva de sistemas de seguridad y confort (*Jinba Ittai*). | • Falta de transparencia en costos, plazos o tasas de interés.<br>• Filtración o mal uso de sus documentos fiscales y bancarios sensibles.<br>• Defectos estéticos no reportados en la unidad o entrega apresurada sin configuración digital. |
 
 ### 2.4 Conflicto entre Usuarios y Resolución Arquitectónica
-* **Conflicto:** El cliente busca inmediatez absoluta: acude a piso sin cita, cambia de modelo de interés de improviso y exige pruebas de manejo y cotizaciones sin entregar comprobantes de ingresos ni licencias. La asesora necesita blindar su tiempo y su inventario demo contra clientes no calificados sin proyectar burocracia. Paralelamente, el Administrador requiere validar estrictamente los tipos de datos y la completitud del expediente para no romper los esquemas de backend.
+* **Conflicto:** El cliente busca inmediatez absoluta: acude a piso sin cita, cambia de modelo de interés de improviso y exige pruebas de manejo y cotizaciones sin entregar comprobantes de ingresos ni licencias. La asesora necesita blindar su tiempo y su inventario demo contra clientes no calificados sin proyectar burocracia. Paralelamente, el Administrador requiere validar estrictamente los tipos de datos y la completitud del expediente para evitar inconsistencias en el almacenamiento estructurado.
 * **Resolución del Sistema:** El sistema implementa un desacoplamiento de etapas: permite la emisión inmediata de cotizaciones rápidas (modo preliminar) y activa un candado transaccional que exige la captura de licencia de conducir vigente antes de habilitar la reserva de unidad demo, así como la validación del expediente antes de generar la orden de entrega.
 
 ---
@@ -52,18 +52,18 @@ El sistema define explícitamente tres perfiles de usuario con privilegios, inte
 *Regla de Ingeniería: Todo lo que no esté explícitamente redactado en este apartado no existe ni será desarrollado dentro del ciclo actual.*
 
 ### 3.1 Funcionalidades Dentro del Alcance (In-Scope)
-Cada requerimiento dentro del alcance está formulado de forma verificable mediante verbos operativos:
+Cada requerimiento dentro del alcance está formulado de forma verificable mediante verbos operativos comprobables:
 
 1. **Autentica** credenciales de usuario (Administrador y Asesora) bajo esquema de sesión local segura con persistencia de tokens para Google Workspace Enterprise.
-2. **Registra** prospectos y clientes capturando nombre, teléfono, correo electrónico, canal de origen y modelo vehicular de interés.
+2. **Registra** prospectos y clientes capturando nombre, teléfono (10 dígitos), correo electrónico, canal de origen y modelo vehicular Mazda de interés.
 3. **Calcula** planes de financiamiento automotriz paramétricos en función de precio de lista, porcentaje de enganche (mínimo 10%), plazo en meses (12 a 72) y tasa de interés activa.
 4. **Ingesta** archivos binarios en formatos PDF, Microsoft Word (`.docx`), Microsoft Excel (`.xlsx`) e imágenes rasterizadas (JPEG/PNG) correspondientes a identificaciones (INE), comprobantes de domicilio y estados de cuenta.
-5. **Transforma** la información de los archivos cargados hacia estructuras normalizadas de texto (`JSON`, `CSV`, `TXT`) para su indexación local.
+5. **Transforma** la información de los archivos cargados hacia estructuras normalizadas de texto plano (`JSON`, `CSV`, `TXT`) para su indexación local inmediata.
 6. **Despliega** el semáforo de completitud documental del expediente crediticio (Incompleto / En Revisión / Validado).
 7. **Genera** resúmenes comerciales formateados para su envío automatizado a la API de enlace directo de WhatsApp (`https://wa.me/`) y en documentos descargables PDF.
 8. **Edita** metadatos y campos variables de las plantillas documentales preconfiguradas directamente desde la interfaz de usuario.
 9. **Exporta** paquetes de expedientes pre-llenados en formatos Microsoft Word (`.docx`), Microsoft Excel (`.xlsx`) y PDF compilado sin marcas de agua de herramientas externas.
-10. **Agenda** pruebas de manejo asociadas al catálogo demo bloqueando traslapes de horario y exigiendo la carga previa de la licencia de conducir.
+10. **Agenda** pruebas de manejo asociadas al catálogo demo bloqueando traslapes de horario y exigiendo la carga previa de la licencia de conducir vigente.
 11. **Valida** el checklist técnico de 5 fases correspondiente al Mazda Handover Experience:
     * *Fase 1 (Pre-Entrega):* Marca la conclusión de inspección técnica PDI, detallado estético y cotejo de póliza de garantía/factura.
     * *Fase 2 (Recepción):* Registra la hora de arribo del cliente y valida la firma de actas de entrega y contratos de financiamiento.
@@ -82,13 +82,13 @@ El sistema **NO** realizará ni tendrá control sobre las siguientes capacidades
 6. **NO** mantendrá almacenamiento de expedientes en bases de datos públicas o servidores compartidos de terceros no autorizados.
 
 ### 3.3 Justificación de las Exclusiones
-* *ERP/DMS Propietario:* Los distribuidores automotrices operan sobre redes corporativas cerradas (ej. SAP, CDK Global, SICOP) con rigurosas barreras de ciberseguridad, permisos burocráticos centralizados y APIs restringidas que harían inviable la entrega y validación técnica del proyecto en un marco ágil[.
+* *ERP/DMS Propietario:* Los distribuidores automotrices operan sobre redes corporativas cerradas (ej. SAP, CDK Global, SICOP) con rigurosas barreras de ciberseguridad, permisos burocráticos centralizados y APIs restringidas que harían inviable la entrega y validación técnica del proyecto en un marco ágil.
 * *Timbrado Fiscal (CFDI) y Procesamiento de Pagos:* La legislación fiscal mexicana y las políticas internas de la distribuidora reservan la facturación y la cobranza exclusivamente al departamento de cajas corporativo. Intentar cobrar o facturar dentro del sistema transferiría responsabilidades contables y regulatorias ajenas al objetivo de asistencia operativa de la asesora.
-* *Telemetría y Buró de Crédito:* El proyecto se delimita a la interfaz humana de atención y compilación operativa. Integrar hardware en vehículos o contratos con sociedades de información crediticia introduce costos de licenciamiento, responsabilidades jurídicas y dependencias externas que diluyen el valor esencial del software[.
+* *Telemetría y Buró de Crédito:* El proyecto se delimita a la interfaz humana de atención y compilación operativa. Integrar hardware en vehículos o contratos con sociedades de información crediticia introduce costos de licenciamiento, responsabilidades jurídicas y dependencias externas que diluyen el valor esencial del software.
 
 ### 3.4 Justificación de Funcionalidades Futuras (Backlog Evolutivo)
 Las siguientes capacidades están reconocidas como valiosas para versiones subsecuentes pero quedan fuera del ciclo actual para maximizar la simplicidad y evitar trabajo innecesario (Principio Ágil 10):
-* *Extracción OCR con Inteligencia Artificial On-Device:* Automatizar la lectura de caracteres en identificaciones oficiales escaneadas. *Justificación:* Requiere modelos de visión computacional y calibración contra ruido en imágenes que retrasarían la entrega de las funciones transaccionales centrales[.
+* *Extracción OCR con Inteligencia Artificial On-Device:* Automatizar la lectura de caracteres en identificaciones oficiales escaneadas. *Justificación:* Requiere modelos de visión computacional y calibración contra ruido en imágenes que retrasarían la entrega de las funciones transaccionales centrales.
 * *Portal de Autoservicio para el Cliente:* Permitir que el comprador suba sus comprobantes desde su propio navegador web. *Justificación:* Exige desplegar infraestructura pública multinquilino y autenticación de cara al usuario final, incrementando la superficie de ataque y costos de infraestructura antes de validar el flujo de trabajo de la asesora.
 
 ---
@@ -148,7 +148,7 @@ Conforme al análisis de ingeniería de software, se evaluaron y descartaron for
 
 ## 6. Plan Inicial de Sprints (Estructura de Construcción)
 
-* **Sprint 1 (Semanas 1-2):** Modelado de tipos (`deal_state.json`), motor de ingestión de archivos (PDF/Word/Excel) y persistencia reactiva local en IndexedDB[.
-* **Sprint 2 (Semanas 3-4):** Motor paramétrico de cotización rápida, validación de reglas de negocio crediticias (RN-01 a RN-04) y generación de resúmenes para WhatsApp y PDF[.
-* **Sprint 3 (Semanas 5-6):** Módulo de orquestación de entrega ceremonial (Mazda Handover Experience - Fases 1 a 5) y semáforo de pre-entrega (RN-05)[.
-* **Sprint 4 (Semanas 7-8):** Integración del puente de sincronización con Google Workspace Enterprise (Drive API / Sheets API), pruebas integrales de usabilidad en piso y endurecimiento de seguridad[.
+* **Sprint 1 (Semanas 1-2):** Modelado de tipos (`deal_state.json`), motor de ingestión de archivos (PDF/Word/Excel) y persistencia reactiva local en IndexedDB.
+* **Sprint 2 (Semanas 3-4):** Motor paramétrico de cotización rápida, validación de reglas de negocio crediticias (RN-01 a RN-04) y generación de resúmenes para WhatsApp y PDF.
+* **Sprint 3 (Semanas 5-6):** Módulo de orquestación de entrega ceremonial (Mazda Handover Experience - Fases 1 a 5) y semáforo de pre-entrega (RN-05).
+* **Sprint 4 (Semanas 7-8):** Integración del puente de sincronización con Google Workspace Enterprise (Drive API / Sheets API), pruebas integrales de usabilidad en piso y endurecimiento de seguridad.
