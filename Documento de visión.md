@@ -49,76 +49,7 @@ El sistema normaliza archivos desestructurados (fotografías de identificaciones
 
 La asesora de ventas gestiona leads entrantes de manera desarticulada mediante libretas físicas y chats de WhatsApp. Los clientes acuden a piso sin cita previa o fuera del horario programado, solicitando cotizaciones complejas mientras la asesora debe consultar hojas de cálculo pesadas en terminales fijas. La documentación sensible (INE, nóminas, comprobantes fiscales) se almacena mezclada en la galería de su teléfono. En la fase de entrega, la coordinación con el área técnica de inspección (PDI) y detallado/lavado se realiza de palabra, derivando en demoras durante la entrega, omisiones en la configuración tecnológica del vehículo (Mazda Connect, MyMazda) y retrabajos administrativos.
 
-### 2.3 Matriz de Usuarios del Sistema
-
-El sistema define explícitamente tres perfiles de usuario con privilegios, interfaces y responsabilidades diferenciadas:
-
-| Tipo de Usuario | Rol y Descripción | Necesidades Principales en el Sistema | Preocupaciones y Riesgos |
-| --- | --- | --- | --- |
-| **Usuario Administrador (Rodrigo)**<br> | Responsable técnico de arquitectura, pruebas de integración, despliegue, monitoreo de esquemas de datos y mantenimiento preventivo.
-
- | • Configuración de esquemas de extracción (`JSON`/`CSV`) y plantillas Office/PDF.
-
-<br>
-
-<br>• Acceso a bitácoras transaccionales de sincronización y diagnóstico de errores.<br>
-
-<br>• Pruebas de estrés y validación de atributos de calidad.
-
- | • Introducción de errores o regresiones que bloqueen la operación en piso de venta.
-
-<br>
-
-<br>• Incompatibilidad de formatos binarios o ruptura de tokens con Google Workspace.<br>
-
-<br>• Violaciones de integridad en la persistencia local.
-
- |
-| **Usuario Asesora de Ventas (Erika)**<br> | Usuario operativo principal que atiende al cliente, realiza el perfilamiento comercial, calcula esquemas financieros y conduce la entrega física.
-
- | • Registro de clientes y prospectos en menos de 30 segundos.
-
-<br>
-
-<br>• Cotizador paramétrico funcional en móvil en menos de 45 segundos.
-
-<br>
-
-<br>• Ingestión y auditoría visual de documentos en formatos Office/PDF.
-
-<br>
-
-<br>• Checklist interactivo para la ejecución del Handover SOP (Fases 1 a 5). | • Perder ventas o credibilidad por interfaces lentas o congelamientos en piso de venta.
-
-<br>
-
-<br>• Rechazo de expedientes por parte de la mesa de control crediticio.
-
-<br>
-
-<br>• Depender de áreas internas indiferentes para verificar el estado de la unidad.
-
- |
-| **Usuario Cliente / Prospecto**<br> | Comprador del vehículo que interactúa directa o indirectamente con los entregables del sistema (cotizaciones, carga de archivos, firma y entrega).
-
- | • Recepción de cotizaciones transparentes y formateadas vía WhatsApp.
-
-<br>
-
-<br>• Proceso ágil y digno de recepción y firma documental sin tiempos muertos.
-
-<br>
-
-<br>• Entrega ceremonial del auto con explicación exhaustiva de sistemas de seguridad y confort (*Jinba Ittai*). | • Falta de transparencia en costos, plazos o tasas de interés.
-
-<br>
-
-<br>• Filtración o mal uso de sus documentos fiscales y bancarios sensibles.
-
-<br>
-
-<br>• Defectos estéticos no reportados en la unidad o entrega apresurada sin configuración digital. |
-
+2.3 Matriz de Usuarios del SistemaEl sistema define explícitamente tres perfiles de usuario con privilegios, interfaces y responsabilidades diferenciadas:   Tipo de UsuarioRol y DescripciónNecesidades Principales en el SistemaPreocupaciones y RiesgosUsuario Administrador (Rodrigo)   Responsable técnico de arquitectura, pruebas de integración, despliegue, monitoreo de esquemas de datos y mantenimiento preventivo.   • Configuración de esquemas de extracción (JSON/CSV) y plantillas Office/PDF.   • Acceso a bitácoras transaccionales de sincronización y diagnóstico de errores.• Pruebas de estrés y validación de atributos de calidad.   • Introducción de errores o regresiones que bloqueen la operación en piso de venta.   • Incompatibilidad de formatos binarios o ruptura de tokens con Google Workspace.• Violaciones de integridad en la persistencia local.   Usuario Asesora de Ventas (Erika)   Usuario operativo principal que atiende al cliente, realiza el perfilamiento comercial, calcula esquemas financieros y conduce la entrega física.   • Registro de clientes y prospectos en menos de 30 segundos.   • Cotizador paramétrico funcional en móvil en menos de 45 segundos.   • Ingestión y auditoría visual de documentos en formatos Office/PDF.   • Checklist interactivo para la ejecución del Handover SOP (Fases 1 a 5).• Perder ventas o credibilidad por interfaces lentas o congelamientos en piso de venta.   • Rechazo de expedientes por parte de la mesa de control crediticio.   • Depender de áreas internas indiferentes para verificar el estado de la unidad.   Usuario Cliente / Prospecto   Comprador del vehículo que interactúa directa o indirectamente con los entregables del sistema (cotizaciones, carga de archivos, firma y entrega).   • Recepción de cotizaciones transparentes y formateadas vía WhatsApp.   • Proceso ágil y digno de recepción y firma documental sin tiempos muertos.   • Entrega ceremonial del auto con explicación exhaustiva de sistemas de seguridad y confort (Jinba Ittai).• Falta de transparencia en costos, plazos o tasas de interés.   • Filtración o mal uso de sus documentos fiscales y bancarios sensibles.   • Defectos estéticos no reportados en la unidad o entrega apresurada sin configuración digital.2.4 
 ### 2.4 Conflicto entre Usuarios y Resolución Arquitectónica
 
 * **Conflicto:** El cliente busca inmediatez absoluta: acude a piso sin cita, cambia de modelo de interés de improviso y exige pruebas de manejo y cotizaciones sin entregar comprobantes de ingresos ni licencias. La asesora necesita blindar su tiempo y su inventario demo contra clientes no calificados sin proyectar burocracia. Paralelamente, el Administrador requiere validar estrictamente los tipos de datos y la completitud del expediente para no romper los esquemas de backend.
