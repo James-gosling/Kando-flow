@@ -6,7 +6,7 @@
 **Revisor (Dupla):** Emiliano Cabañas Prieto (Proyecto: *Memorium*)  
 **Versión:** 1.1  
 **Fecha:** Septiembre 2026  
-**Enlace al Prototipo en Figma:** `https://www.figma.com/design/XXXXXX/KandoFlow-Prototype` *( Acceso público )*  
+**Enlace al Prototipo en Figma:** `https://www.figma.com/make/TY4sQ7cz0vhuAj6bc0QSdU/3-Screen-Mobile-Workflow?t=hteUfOLOtM9mPyaq-1` *( Acceso público )*  
 **Archivo en Repositorio:** `docs/especificacion-requisitos.md`  
 
 ---
