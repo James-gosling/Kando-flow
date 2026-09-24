@@ -1,4 +1,4 @@
-### Requisitos Funcionales (RF) — ISO/IEC/IEEE 29148
+### Requerimientos Funcionales (RF) — ISO/IEC/IEEE 29148
 
 | ID | Nombre | Descripción Operativa | Prioridad | Origen / Justificación de Dominio |
 | --- | --- | --- | --- | --- |
@@ -13,7 +13,7 @@
 
 ---
 
-### Requisitos No Funcionales (RNF) — ISO/IEC 25010
+### Requerimientos No Funcionales (RNF) — ISO/IEC 25010
 
 | ID | Característica | Métrica / Especificación Técnica | Justificación Técnica & Origen Operativo |
 | --- | --- | --- | --- |
