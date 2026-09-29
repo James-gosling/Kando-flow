@@ -152,3 +152,4 @@ Conforme al análisis de ingeniería de software, se evaluaron y descartaron for
 * **Sprint 2 (Semanas 3-4):** Motor paramétrico de cotización rápida, validación de reglas de negocio crediticias (RN-01 a RN-04) y generación de resúmenes para WhatsApp y PDF.
 * **Sprint 3 (Semanas 5-6):** Módulo de orquestación de entrega ceremonial (Mazda Handover Experience - Fases 1 a 5) y semáforo de pre-entrega (RN-05).
 * **Sprint 4 (Semanas 7-8):** Integración del puente de sincronización con Google Workspace Enterprise (Drive API / Sheets API), pruebas integrales de usabilidad en piso y endurecimiento de seguridad.
+

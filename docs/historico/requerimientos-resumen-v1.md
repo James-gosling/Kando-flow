@@ -24,3 +24,4 @@
 | **RNF-05** | **Usabilidad** (Accesibilidad y Contraste) | Contraste de texto y elementos de control $\ge 4.5:1$ sobre el fondo oscuro (*Dark Mode* de alto contraste). | **Origen:** Visibilidad en bahías de entrega y patios donde convergen zonas de sombra con luz solar intensa. |
 | **RNF-06** | **Mantenibilidad** (Modularidad) | Arquitectura desacoplada en tres capas independientes: Componentes UI, Motores de Lógica Financiera y Adaptadores de Persistencia Local. | **Origen:** Facilidad de mantenimiento semestral para actualizar tasas o modelos sin refactorizar la interfaz de usuario. |
 | **RNF-07** | **Portabilidad** (Compatibilidad) | PWA responsiva operativa en motores Chromium $\ge 110$ y WebKit/Safari $\ge 16.4$ sin requerir instalación desde tiendas propietarias. | **Origen:** Compatibilidad cruzada para correr indistintamente en smartphones personales o en tablets de la agencia. |
+

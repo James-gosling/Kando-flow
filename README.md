@@ -1,98 +1,47 @@
-# KandoFlow (`kandoflow`)
+# KandoFlow
 
-> **Estación de Trabajo Operativa, Aceleración Comercial y Protocolo Ceremonial de Entrega para Asesoría Mazda.**  
-> *Inspirado en la filosofía Kando (感動) de asombro y hospitalidad genuina, potenciado con disciplina operativa marcial para eliminar la fricción del piso de venta y garantizar una experiencia impecable desde el primer contacto hasta la entrega de llaves.*
+**Evaluación parcial · Requisitos y prototipo — Unidad 2**  
+**Autor:** Rodrigo Valdespino Vértiz · **Dupla:** Emiliano Cabañas Prieto  
+**Versión documental:** 2.0 · **Actualización:** 29 de septiembre de 2026
 
----
+KandoFlow propone una estación de trabajo móvil para apoyar la atención comercial Mazda: cotizaciones indicativas, expedientes de crédito y entrega vehicular de cinco fases. La solución se plantea como PWA con operación local y respaldo corporativo.
 
-## 1. Descripción del Sistema
+**Estado actual:** paquete de análisis reorganizado; no hay aplicación implementada. El cierre de la entrega requiere verificar el prototipo, registrar la revisión final de la dupla y grabar el video. Consulta [la lista de entrega](docs/control-entrega.md).
 
-`KandoFlow` es una aplicación web transaccional y Progressive Web App (PWA) de arquitectura desacoplada y filosofía local-first. Nace como un escudo operativo y estación de trabajo para la asesora comercial de Mazda, mitigando la fragmentación de canales, la falta de soporte interdepartamental en agencia y la llegada no programada de clientes a piso.
+## Entregables y orden de lectura
 
-El sistema unifica el ciclo comercial a través de tres pilares fundamentales:
-1. **Ingestión y Normalización Inmediata:** Transforma archivos binarios heterogéneos (PDFs de nómina y estados de cuenta, fotografías móviles de INE, catálogos en Excel `.xlsx` y documentos Word `.docx`) en esquemas de datos planos y ligeros (`JSON`, `CSV`, `TXT`) para consulta y procesamiento instantáneo en la memoria del navegador.
-2. **Generación Documental Automatizada:** Pre-llena, audita y compila expedientes crediticios y cotizaciones financieras directamente en formatos Microsoft Word (`.docx`), Microsoft Excel (`.xlsx`) y paquetes consolidados en PDF listos para firma física o digital.
-3. **Orquestación del Mazda Handover Experience:** Supervisa y valida paso a paso el cumplimiento estricto de las 5 fases del protocolo de entrega ceremonial de la unidad.
+| Entregable | Enlace |
+|---|---|
+| Problema, usuarios y alcance | [Visión del producto](docs/vision-del-producto.md) |
+| Ficha de dominio, entrevista y bitácora | [Guion de entrevista](docs/guion-entrevista.md) |
+| Fichas funcionales y no funcionales | [Especificación vigente](docs/especificacion-requisitos.md) |
+| Diagrama y caso escrito con alternos | [Casos de uso](docs/casos-de-uso.md) |
+| Diagrama editable / imagen | [.drawio](docs/diagramas/casos-de-uso.drawio) · [.png](docs/diagramas/casos-de-uso.png) |
+| Prototipo y pruebas de navegación | [Acceso y recorridos](docs/prototipo.md) |
+| Cadena alcance → requisitos → casos → pantallas | [Trazabilidad](docs/trazabilidad.md) |
+| Revisión de la dupla | [Registro histórico y revisión 2.0 pendiente](docs/especificacion-requisitos.md#revision-dupla) |
+| Video de 6–8 minutos | [Guion de 7 minutos](docs/guion-video.md); grabación pendiente, se entrega fuera del repositorio |
+| Rúbrica y pendientes | [Control de entrega](docs/control-entrega.md) |
+| Cambios e IDs anteriores | [Control de cambios](docs/control-cambios.md) |
 
----
+## Recorrido de validación
 
-## 2. Roles de Usuario
+El prototipo prioriza **CU-05: Ejecutar entrega vehicular**. La asesora selecciona una entrega, completa preparación, firma, inspección, orientación y recepción para obtener un pase. Si detecta un daño o faltante, **CU-06** pausa la entrega y documenta resolución/acuerdo antes de retomar. Una incidencia bloqueante impide el pase.
 
-El sistema modela tres perfiles de usuario con interfaces, responsabilidades y alcances diferenciados:
+[Figma enlazado por el proyecto](https://www.figma.com/make/TY4sQ7cz0vhuAj6bc0QSdU/3-Screen-Mobile-Workflow?t=hteUfOLOtM9mPyaq-1). **Acceso y navegación aún no verificados en esta revisión.** Los identificadores SCR describen pantallas previstas y no acreditan su existencia en el archivo.
 
-* **Usuario Administrador (Rodrigo Valdespino Vértiz):** Responsable de la infraestructura técnica, gestión de plantillas documentales, pruebas de software, monitoreo de bitácoras de sincronización y mantenimiento del repositorio.
-* **Usuario Asesora de Ventas (Erika Vertiz):** Usuaria operativa principal que registra prospectos, emite cotizaciones paramétricas en segundos durante la interacción física, audita expedientes crediticios y conduce la ceremonia de entrega técnica.
-* **Usuario Cliente / Prospecto:** Comprador que recibe propuestas financieras transparentes formateadas para WhatsApp, formaliza contratos y experimenta la orientación técnica *Jinba Ittai* en la sala de entrega.
+## Arquitectura propuesta
 
----
+| Capa | Propuesta |
+|---|---|
+| Presentación | React + TypeScript + Vite; interfaz adaptable y PWA |
+| Negocio | Cotización, auditoría documental y reglas de entrega |
+| Datos | IndexedDB local; adaptadores autorizados de Google Drive/Sheets |
 
-## 3. Arquitectura del Sistema (3 Capas Desacopladas)
+Estas tecnologías describen una futura implementación. No existen todavía `src/`, scripts de compilación ni pruebas de ejecución de la aplicación. Los RNF son metas verificables para esa etapa.
 
-[ Cliente / Prospecto ] (Piso de Venta, WhatsApp, Citas Espontáneas)
-│
-▼
-┌────────────────────────────────────────────────────────────────────────┐
-│ Capa 1: Presentación (Frontend SPA / PWA)                             │
-│ - React + TypeScript + Vite (Touch-First, botones ≥ 48x48 px)          │
-│ - Diseño de alta visibilidad para exteriores y disponibilidad offline   │
-└───────────────────────────────────┬────────────────────────────────────┘
-│
-▼
-┌────────────────────────────────────────────────────────────────────────┐
-│ Capa 2: Lógica de Negocio y Procesamiento (Edge / Client-Side Engine)  │
-│ - Motor Paramétrico de Cotización MFS (< 500 ms)                       │
-│ - Pipeline de Normalización: PDF/Office/Imágenes ➔ JSON / CSV / TXT    │
-│ - Semáforo de Auditoría de Expedientes (INE, Domicilio, Bancos)        │
-│ - Motor de Validación Bloqueante de Entrega (Fases 1 a 5 SOP)          │
-└───────────────────────────────────┬────────────────────────────────────┘
-│
-▼
-┌────────────────────────────────────────────────────────────────────────┐
-│ Capa 3: Persistencia y Datos (Local Sovereign + Enterprise Sync)       │
-│ - Persistencia Local Inmediata: IndexedDB (Browser Cache)              │
-│ - Sincronización Segura: Google Workspace Enterprise (Drive / Sheets)  │
-│ - Cifrado: TLS 1.3 en tránsito y AES-256 en reposo                     │
-└────────────────────────────────────────────────────────────────────────┘
+## Organización documental
 
+Todos los documentos activos están en `docs/`; `docs/diagramas/` contiene las dos representaciones del modelo. `docs/historico/` conserva los originales retirados. La especificación 2.0 es la única fuente activa de requisitos: consultar el histórico para evidencia y equivalencias, no como un catálogo adicional.
 
----
-
-## 4. Protocolo de Entrega: Mazda Handover SOP (5 Fases)
-
-`KandoFlow` implementa una máquina de estados finita que hace cumplir de forma secuencial y bloqueante el protocolo oficial de entrega:
-
-1. **Fase 1: Pre-Entrega e Inspección Técnica (PDI):** Verificación de retiro de plásticos protectores, escaneo diagnóstico PDI concluido, inspección estética de carrocería (detallado/lavado) y armado de carpeta fiscal/garantía.
-2. **Fase 2: Bienvenida y Firma Contractual:** Recepción en Handover Lounge, revisión de términos financieros y captura de firmas en actas de entrega y contratos.
-3. **Fase 3: El Develado Ceremonial:** Retiro de funda premium en bahía de entrega, captura de fotografía conmemorativa e inspección física conjunta de pintura, rines y vestiduras.
-4. **Fase 4: Orientación Técnica Mazda (*Jinba Ittai*):** Ajuste postural ergonómico de asiento/espejos, emparejamiento de smartphone (Apple CarPlay / Android Auto), explicación del paquete de seguridad activa *i-Activesense* y vinculación del VIN en la aplicación MyMazda.
-5. **Fase 5: Entrega Final y Salida:** Entrega ceremonial de duplicado de llaves, estuche de manuales de propietario, obsequio de cortesía y expedición del pase de salida vehicular.
-
----
-
-## 5. Estructura del Repositorio
-
-El proyecto se organiza bajo una estructura modular orientada a dominios funcionales:
-
-```text
-kandoflow/
-├── docs/
-│   ├── vision-del-producto.md     # Documento de Visión formal (5 apartados)
-│   ├── requerimientos.md          # Especificación de requisitos (ISO/IEC/IEEE 29148)
-│   └── requisitos-sistema.md      # Requisitos técnicos de sistema (SyRS)
-├── public/                        # Activos estáticos, iconos y manifiesto PWA
-├── src/
-│   ├── assets/                    # Iconografía y diseño visual
-│   ├── components/                # Componentes atómicos de UI
-│   ├── modules/
-│   │   ├── deal-desk/             # Pipeline de prospectos y cotizador paramétrico
-│   │   ├── dossier/               # Ingestión, parsing y exportación Office/PDF
-│   │   ├── handover/              # Checklist interactivo de entrega ceremonial
-│   │   └── sync/                  # Conectores de sincronización con Google Workspace
-│   ├── types/
-│   │   └── deal_state.ts          # Esquema canónico tipado (JSON)
-│   ├── App.tsx                    # Enrutador y layout base
-│   └── main.tsx                   # Punto de entrada de la aplicación
-├── .env.example                   # Variables de entorno requeridas
-├── package.json                   # Dependencias y scripts de construcción
-├── tsconfig.json                  # Configuración del compilador TypeScript
-└── README.md                      # Portada y documentación general
+La documentación previa registra una entrevista simulada con la dupla y su aprobación 1.1. La revisión de la versión 2.0 debe quedar registrada antes de entregar. El repositorio prepara evidencias para los cinco criterios; la calificación final corresponde al docente.

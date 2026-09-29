@@ -63,3 +63,4 @@
 ### 3.3 Hallazgos inesperados (Dentro de la frontera del sistema)
 * **Respaldo en papel ante caídas de sistema:** Ante fallas de conexión o de portales externos, la asesora recurre a solicitudes físicas en blanco. El sistema debe contemplar la descarga inmediata de la solicitud pre-llenada en formato estándar (PDF) para firma manual de contingencia.
 * **Vínculo directo con el índice de satisfacción (CSI):** Las demoras u omisiones en la explicación del auto afectan directamente la evaluación del cliente y las comisiones de la asesora. El sistema no es solo organizativo, sino una herramienta de protección de ingresos y cumplimiento operativo.
+

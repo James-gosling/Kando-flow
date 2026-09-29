@@ -30,3 +30,4 @@
 | **v1.0.1** | **RNF-04** (Ergonomía Táctil) | Cuantificación de métrica | El requisito original indicaba "botones cómodos para la mano" (adjetivo ambiguo); se reescribió fijando una métrica cuantitativa estricta $\ge 48 \times 48\text{ px}$ bajo la pauta WCAG 2.1. | Rodrigo Valdespino (Líder) |
 | **v1.0.2** | **CU-06** / **RF-07** (Incidencia) | Inclusión en prototipo | El prototipo inicial solo cubría el "camino feliz" sin contingencias; se integró el modal emergente `SCR-ALT` conectado desde las Fases 1 y 3 para resolver el flujo alterno ante rayones o faltantes. | Rodrigo Valdespino (Líder) |
 | **v1.0.2** | **Tabla de Trazabilidad** | Cierre de orígenes | Se actualizaron los campos que figuraban como "supuesto propio", validándolos formalmente contra la sesión de entrevista. | Emiliano Cabañas (Dupla) |
+
