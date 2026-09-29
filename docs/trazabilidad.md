@@ -2,11 +2,11 @@
 
 ## 1. Lectura de la matriz
 
-La columna Origen remite a [hallazgos H y supuestos S](guion-entrevista.md). Los criterios completos y sus métodos están en [especificación](especificacion-requisitos.md). La pantalla es **prevista**, no una afirmación de implementación en Figma. Estado documental de todos los RF: propuesta consolidada; revisión 2.0 pendiente.
+La columna Origen remite a [hallazgos H y supuestos S](guion-entrevista.md). Los criterios completos y sus métodos están en [especificación](especificacion-requisitos.md). Las pantallas SCR están creadas en el Figma Design enlazado en [prototipo](prototipo.md). Representan interacciones con datos ficticios, no una implementación real de los servicios. Estado documental de todos los RF: propuesta consolidada; revisión 2.0 pendiente.
 
 ## 2. RF → objetivo de uso → interfaz → aceptación
 
-| RF | Origen / confirmación | CU | Pantalla prevista | Comprobación representativa |
+| RF | Origen / confirmación | CU | Pantalla de prototipo | Comprobación representativa |
 |---|---|---|---|---|
 | [RF-01](especificacion-requisitos.md#rf-01) Calcular cotización indicativa | H-01 (dupla en rol). Fórmula y límites S-01 pendientes con la financiera. | CU-01 | SCR-01, SCR-02 | Precio 450000, enganche 25%, plazo 48 y tasa nominal anual 12%: capital 337500 y cuota 8887.67 MXN, redondeada a dos decimales |
 | [RF-02](especificacion-requisitos.md#rf-02) Preparar propuesta para WhatsApp | H-05 (dupla en rol); codificación del enlace es decisión técnica. | CU-01 | SCR-01, SCR-02 | Con teléfono mexicano de 10 dígitos se forma el destino internacional 52 seguido del número y texto URL-encoded con modelo, precio, enganche, plazo, tasa y cuota; conservar acentos y símbolos |
@@ -53,12 +53,12 @@ Los límites son propuestas técnicas, no resultados medidos. Usabilidad visual 
 | Requisito funcional | RF-06 secuencia; RF-07 incidencia; RF-12 pase condicionado |
 | Condición de calidad | RNF-05 controles táctiles; RNF-07 continuidad local propuesta |
 | Caso de uso | CU-05 principal; CU-06/FA-02 por daño o faltante; FA-01 por paso incompleto |
-| Prototipo | SCR-07 a SCR-13 para principal; SCR-14 para alterno; navegación pendiente de comprobar |
+| Prototipo | SCR-07 a SCR-13 para principal; SCR-14 para alterno; conexiones comprobadas por simulación de reacciones; prueba manual pendiente |
 | Validación | V-01 completa entrega; V-02 impide salto; V-03 retoma tras acuerdo; V-04 suspende sin pase |
 | Revisión | Registro de la dupla sobre la versión 2.0, todavía pendiente |
 
 ## 5. Cobertura y límites
 
-Todos los RF tienen CU y pantalla prevista; todos los CU del diagrama tienen al menos un RF. Las funciones fuera del recorrido de entrega siguen en el alcance del sistema, pero no se declaran navegables. Figma debe validar al menos el flujo principal completo y uno alterno para satisfacer la rúbrica; el video debe mostrar este hilo explícitamente.
+Todos los RF tienen CU y pantalla prevista; todos los CU del diagrama tienen al menos un RF. Las vistas de apoyo están enlazadas para contextualizar funciones fuera de la entrega; contienen ejemplos fijos, sin ejecución de servicios reales. Figma debe validar al menos el flujo principal completo y uno alterno para satisfacer la rúbrica; el video debe mostrar este hilo explícitamente.
 
 Las relaciones previas incompatibles se conservaron solo en [histórico](historico/README.md); su migración está en [control de cambios](control-cambios.md).

@@ -6,7 +6,7 @@
 
 KandoFlow propone una estación de trabajo móvil para apoyar la atención comercial Mazda: cotizaciones indicativas, expedientes de crédito y entrega vehicular de cinco fases. La solución se plantea como PWA con operación local y respaldo corporativo.
 
-**Estado actual:** paquete de análisis reorganizado; no hay aplicación implementada. El cierre de la entrega requiere verificar el prototipo, registrar la revisión final de la dupla y grabar el video. Consulta [la lista de entrega](docs/control-entrega.md).
+**Estado actual:** paquete de análisis reorganizado; no hay aplicación implementada. El prototipo editable ya contiene 22 pantallas y conexiones verificadas por simulación de sus reacciones. El cierre requiere probar Presentar como evaluador, registrar la revisión final de la dupla y grabar el video. Consulta [la lista de entrega](docs/control-entrega.md).
 
 ## Entregables y orden de lectura
 
@@ -28,7 +28,7 @@ KandoFlow propone una estación de trabajo móvil para apoyar la atención comer
 
 El prototipo prioriza **CU-05: Ejecutar entrega vehicular**. La asesora selecciona una entrega, completa preparación, firma, inspección, orientación y recepción para obtener un pase. Si detecta un daño o faltante, **CU-06** pausa la entrega y documenta resolución/acuerdo antes de retomar. Una incidencia bloqueante impide el pase.
 
-[Figma enlazado por el proyecto](https://www.figma.com/make/TY4sQ7cz0vhuAj6bc0QSdU/3-Screen-Mobile-Workflow?t=hteUfOLOtM9mPyaq-1). **Acceso y navegación aún no verificados en esta revisión.** Los identificadores SCR describen pantallas previstas y no acreditan su existencia en el archivo.
+[Abrir canvas editable](https://www.figma.com/design/ZuGRFCYIXklddDeCfIklz8?node-id=8-77) · [Abrir prototipo desde la agenda](https://www.figma.com/proto/ZuGRFCYIXklddDeCfIklz8?node-id=3-9&starting-point-node-id=3%3A9). Incluye 22 pantallas, 63 controles con interacción y una guía de trazabilidad en el canvas. Se verificaron 20 escenarios mediante evaluación de las reacciones guardadas; queda la prueba manual de Presentar y acceso externo. [Make original](https://www.figma.com/make/TY4sQ7cz0vhuAj6bc0QSdU/3-Screen-Mobile-Workflow?t=hteUfOLOtM9mPyaq-1) se conserva como referencia; el nuevo diseño fue reconstruido desde la especificación, sin afirmar una importación visual exacta.
 
 ## Arquitectura propuesta
 

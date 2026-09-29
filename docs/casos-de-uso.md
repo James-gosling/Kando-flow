@@ -103,4 +103,4 @@ Postcondición: incidencia resuelta/acordada con historial o entrega suspendida 
 | V-04 Incidencia bloqueante | Reportar daño de seguridad o rechazar acuerdo | Pausada, sin pase, retorno al tablero |
 | V-05 Sin conexión | Activar estado simulado offline | Indicador visible y cola pendiente; no se afirma persistencia real |
 
-Los resultados de navegación están pendientes de ejecutar en el Figma real. Los escenarios de rendimiento, seguridad y persistencia exigen pruebas futuras de implementación.
+Las conexiones del nuevo Figma Design se comprobaron mediante 20 escenarios de evaluación de sus reacciones guardadas, incluidos principal, bloqueo y alternos. La prueba manual del reproductor Presentar sigue pendiente. Los escenarios de rendimiento, seguridad y persistencia exigen pruebas futuras de implementación.

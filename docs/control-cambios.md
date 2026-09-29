@@ -48,3 +48,7 @@ CU-01 a CU-07 conservan los objetivos del diagrama original; CU-08 a CU-12 cubre
 ## 4. Historial y decisiones pendientes
 
 Los documentos previos permanecen en [histórico](historico/README.md). Las preguntas S-01 a S-06, la revisión de la dupla, acceso al Figma y video quedan en [control de entrega](control-entrega.md). Toda decisión posterior debe registrar fecha, motivo, requisitos afectados y evidencia real de aceptación; no reemplazar pendientes por aprobaciones sin revisión.
+
+## 5. Prototipo nativo — 29 de septiembre de 2026
+
+Se creó Figma Design editable con 22 pantallas, 63 nodos con interacción y guía de trazabilidad. Se evaluaron 20 escenarios contra las reacciones guardadas y se revisaron visualmente pantallas representativas. Se conservó Make como referencia; no se declara una conversión visual exacta. El avance se bloquea mediante validación condicional al pulsar el botón; el pase revalida los 16 controles. Se actualizaron enlaces y estados documentales. Prueba manual de Presentar, acceso externo, revisión de la dupla y video siguen pendientes.
