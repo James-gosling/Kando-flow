@@ -57,3 +57,8 @@ Se creó Figma Design editable con 22 pantallas, 63 nodos con interacción y gu�
 ## 6. Adenda 2.1 — 30 de septiembre de 2026
 
 Solicitud del autor tras observación de la docente: demostrar inicio de sesión y restricción de casos por actor. RF-15 y CU-11 precisan cuenta/rol, autorización de operaciones, cierre, bloqueo y errores. Figma pasa de 22 a 31 pantallas, con 84 nodos interactivos. Cliente limitado a recepción/acuerdo y reautenticación posterior de asesora. Catorce escenarios de evaluación de reacciones guardadas pasaron. Se corrige FA-01 para describir aviso al pulsar y bloqueo de navegación, coherente con Figma. No se cambian IDs/asociaciones del diagrama. Pendientes: Presentar manual, revisión 2.1, video e implementación real de autenticación/autorización.
+
+
+## 7. Enlace del prototipo publicado — 30 de septiembre de 2026
+
+Se integró la URL de Figma Make proporcionada por el autor: [KandoFlow publicado](https://factor-yam-65024850.figma.site). Se añadió al README y a la documentación del prototipo, conservando el canvas editable y el enlace Presentar de Figma Design. Esta actualización registra la publicación; no declara una prueba funcional del sitio ni traslada al sitio las verificaciones realizadas sobre las reacciones de Design.

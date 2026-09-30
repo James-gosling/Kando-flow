@@ -4,9 +4,13 @@
 
 ## 1. Acceso y estado real
 
+- [Prototipo web publicado de KandoFlow (Figma Make)](https://factor-yam-65024850.figma.site). Enlace para compartir el resultado sin el panel de conversación del editor.
+
 - [Canvas editable de Figma Design](https://www.figma.com/design/ZuGRFCYIXklddDeCfIklz8?node-id=8-77).
 - [Presentar desde SCR-17](https://www.figma.com/proto/ZuGRFCYIXklddDeCfIklz8?node-id=3-472&starting-point-node-id=3%3A472).
 - [Make original, conservado como referencia](https://www.figma.com/make/TY4sQ7cz0vhuAj6bc0QSdU/3-Screen-Mobile-Workflow?t=hteUfOLOtM9mPyaq-1).
+
+**Publicación de Make:** enlace proporcionado por el autor el 30 de septiembre de 2026. La publicación y el canvas de Figma Design son versiones distintas del prototipo. Los conteos de pantallas y pruebas de reacciones documentados a continuación corresponden al archivo Design; no certifican los recorridos del sitio publicado. La prueba funcional del sitio y el acceso como evaluador siguen pendientes.
 
 **Versión de diseño:** 30 de septiembre de 2026. El archivo contiene 31 pantallas nativas, componentes reutilizables, variables de estado y una guía en el canvas. No son capturas planas. La reconstrucción parte de esta especificación: el conector devolvió el inventario de fuentes de Make, pero no permitió leerlas completas; no se afirma una conversión visual exacta del original.
 

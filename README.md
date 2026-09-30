@@ -6,7 +6,9 @@
 
 KandoFlow propone una estación de trabajo móvil para apoyar la atención comercial Mazda: cotizaciones indicativas, expedientes de crédito y entrega vehicular de cinco fases. La solución se plantea como PWA con operación local y respaldo corporativo.
 
-**Estado actual:** paquete de análisis reorganizado; no hay aplicación implementada. El prototipo editable ya contiene 31 pantallas y conexiones verificadas por simulación de sus reacciones. El cierre requiere probar Presentar como evaluador, registrar la revisión final de la dupla y grabar el video. Consulta [la lista de entrega](docs/control-entrega.md).
+**Estado actual:** paquete de análisis reorganizado; no hay aplicación de producción implementada. El prototipo editable ya contiene 31 pantallas y conexiones verificadas por simulación de sus reacciones. El cierre requiere probar Presentar como evaluador, registrar la revisión final de la dupla y grabar el video. Consulta [la lista de entrega](docs/control-entrega.md).
+
+**[Abrir prototipo web publicado de KandoFlow](https://factor-yam-65024850.figma.site)** — versión de Figma Make compartida por el autor el 30 de septiembre de 2026.
 
 ## Entregables y orden de lectura
 
@@ -17,6 +19,7 @@ KandoFlow propone una estación de trabajo móvil para apoyar la atención comer
 | Fichas funcionales y no funcionales | [Especificación vigente](docs/especificacion-requisitos.md) |
 | Diagrama y caso escrito con alternos | [Casos de uso](docs/casos-de-uso.md) |
 | Diagrama editable / imagen | [.drawio](docs/diagramas/casos-de-uso.drawio) · [.png](docs/diagramas/casos-de-uso.png) |
+| Prototipo web publicado | [Abrir KandoFlow](https://factor-yam-65024850.figma.site) |
 | Prototipo y pruebas de navegación | [Acceso y recorridos](docs/prototipo.md) |
 | Cadena alcance → requisitos → casos → pantallas | [Trazabilidad](docs/trazabilidad.md) |
 | Revisión de la dupla | [Registro histórico y revisión 2.0 pendiente](docs/especificacion-requisitos.md#revision-dupla) |
