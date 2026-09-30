@@ -23,7 +23,7 @@ KandoFlow propone una estación de trabajo móvil para apoyar la atención comer
 | Prototipo y pruebas de navegación | [Acceso y recorridos](docs/prototipo.md) |
 | Cadena alcance → requisitos → casos → pantallas | [Trazabilidad](docs/trazabilidad.md) |
 | Revisión de la dupla | [Registro histórico y revisión 2.0 pendiente](docs/especificacion-requisitos.md#revision-dupla) |
-| Video de 6–8 minutos | [Guion de 7 minutos](docs/guion-video.md); grabación pendiente, se entrega fuera del repositorio |
+| Video de 6–8 minutos | Grabación pendiente; se entrega fuera del repositorio |
 | Rúbrica y pendientes | [Control de entrega](docs/control-entrega.md) |
 | Cambios e IDs anteriores | [Control de cambios](docs/control-cambios.md) |
 

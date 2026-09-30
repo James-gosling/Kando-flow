@@ -12,7 +12,7 @@ Este documento es una comprobación de evidencias, no una autoasignación de 25 
 | Requisitos funcionales | 17 fichas, formulación firme, origen H/S, prioridades, relaciones y aceptación | Cotejar campos con plantilla exacta del curso; revisión de la dupla sobre 2.0 |
 | Requisitos no funcionales | 11 fichas con métrica, justificación y método; rendimiento, seguridad, fiabilidad, usabilidad, compatibilidad, mantenibilidad | Revisión de pertinencia con la dupla; pruebas de implementación no exigibles como software ya construido en este parcial |
 | Casos de uso | Diagrama .drawio/.png coherente; CU-05 detallado y alternos con retorno/postcondiciones | Revisión académica final de notación y reglas de negocio |
-| Prototipo y video | Figma Design con 31 pantallas y guía; 20 escenarios de lógica comprobados, recorridos V-01 a V-05 y guion de 7 minutos | Probar Presentar/acceso externo y grabar/entregar video de 6–8 minutos con principal + alterno y trazabilidad visible |
+| Prototipo y video | Figma Design con 31 pantallas y guía; 20 escenarios de lógica comprobados, recorridos V-01 a V-05 | Probar Presentar/acceso externo y grabar/entregar video de 6–8 minutos con principal + alterno y trazabilidad visible |
 
 ## 2. Lista final
 
@@ -29,7 +29,6 @@ Este documento es una comprobación de evidencias, no una autoasignación de 25 
 - [x] Figma Design creado con 31 pantallas, conexiones nativas y revisión visual.
 - [x] Veinte escenarios de lógica comprobados sobre reacciones guardadas; sin destinos rotos.
 - [ ] Figma accesible para el evaluador y prueba manual en Presentar de V-01 a V-04.
-- [ ] Guion del video adaptado al prototipo realmente probado.
 - [ ] Video grabado, duración comprobada y acceso probado.
 - [ ] Plantilla/nomenclatura y estructura cotejadas contra instrucciones completas si añaden condiciones al resumen.
 
@@ -38,7 +37,7 @@ Este documento es una comprobación de evidencias, no una autoasignación de 25 
 1. Validar con la dupla los cambios de requisitos y aplicar el guion revisado; registrar lo realmente obtenido.
 2. Abrir el nuevo Figma Design y probar en Presentar CU-05 y su alterno CU-06. Registrar resultados en [prototipo](prototipo.md).
 3. Registrar la revisión final de la dupla sobre esa versión en [especificación](especificacion-requisitos.md#revision-dupla).
-4. Ensayar y grabar con [guion-video](guion-video.md); comprobar 6–8 minutos y entregar por el medio del curso.
+4. Grabar el recorrido del prototipo y explicar su trazabilidad; comprobar 6–8 minutos y entregar por el medio del curso.
 
 **Bloqueo real:** la revisión final y el video requieren participación humana; no se atribuirán firmas, entrevistas ni resultados que no hayan ocurrido. La aprobación histórica 1.1 permanece visible, pero no certifica cambios 2.0.
 
