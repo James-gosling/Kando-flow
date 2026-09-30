@@ -31,7 +31,7 @@ KandoFlow propone una estación de trabajo móvil para apoyar la atención comer
 
 El prototipo prioriza **CU-05: Ejecutar entrega vehicular**. La asesora selecciona una entrega, completa preparación, firma, inspección, orientación y recepción para obtener un pase. Si detecta un daño o faltante, **CU-06** pausa la entrega y documenta resolución/acuerdo antes de retomar. Una incidencia bloqueante impide el pase.
 
-[Abrir canvas editable](https://www.figma.com/design/ZuGRFCYIXklddDeCfIklz8?node-id=8-77) · [Abrir prototipo desde el inicio de sesión](https://www.figma.com/proto/ZuGRFCYIXklddDeCfIklz8?node-id=3-472&starting-point-node-id=3%3A472). Incluye 31 pantallas, 84 nodos con interacción y una guía de trazabilidad en el canvas. Se verificaron 20 escenarios mediante evaluación de las reacciones guardadas; queda la prueba manual de Presentar y acceso externo. [Make original](https://www.figma.com/make/TY4sQ7cz0vhuAj6bc0QSdU/3-Screen-Mobile-Workflow?t=hteUfOLOtM9mPyaq-1) se conserva como referencia; el nuevo diseño fue reconstruido desde la especificación, sin afirmar una importación visual exacta.
+[Abrir canvas editable](https://www.figma.com/design/ZuGRFCYIXklddDeCfIklz8?node-id=8-77) · [Abrir prototipo desde el inicio de sesión](https://www.figma.com/proto/ZuGRFCYIXklddDeCfIklz8?node-id=3-472&starting-point-node-id=3%3A472). Incluye 31 pantallas, 84 nodos con interacción y una guía de trazabilidad en el canvas. Se verificaron 20 escenarios mediante evaluación de las reacciones guardadas; queda la prueba manual de Presentar y acceso externo.
 
 ## Arquitectura propuesta
 
