@@ -1,6 +1,6 @@
 # Casos de uso — KandoFlow
 
-**Versión:** 2.0 · **Fecha:** 29 de septiembre de 2026.
+**Versión:** 2.1 · **Fecha:** 30 de septiembre de 2026.
 
 ## 1. Frontera y actores
 
@@ -67,13 +67,13 @@ Fotografía ceremonial y obsequio son opcionales. Si una función no equipa en e
 4. En SCR-09 la asesora registra los controles de bienvenida y firma. El sistema habilita Fase 3 solo cuando todos están completos.
 5. En SCR-10 la asesora realiza la inspección conjunta del vehículo y confirma accesorios. Si hay un detalle se activa FA-02; sin incidencias habilita Fase 4.
 6. En SCR-11 la asesora registra orientación y configuración aplicable. El sistema habilita Fase 5 al completar los controles obligatorios.
-7. En SCR-12 la asesora registra llaves y manuales; el cliente confirma la recepción en el dispositivo. El sistema revalida las fases anteriores y la ausencia de incidencias bloqueantes.
+7. En SCR-12 la asesora registra llaves y manuales; la asesora abre SCR-21, el cliente confirma la recepción en la vista temporal y la asesora se reautentica en SCR-23 antes de continuar. El sistema revalida las fases anteriores y la ausencia de incidencias bloqueantes.
 8. La asesora selecciona «Emitir pase». El sistema guarda el ID único, VIN, operador y hora UTC, muestra SCR-13 y marca Completada. Si falla el guardado se ejecuta FA-04.
 9. El sistema deja la operación disponible en la cola de respaldo; si hay red se puede ejecutar CU-07. La falta de sincronización no invalida un pase ya guardado localmente.
 
 ### Flujos alternos y excepciones
 
-**FA-01 — Control obligatorio pendiente (pasos 3, 4, 6 o 7).** El botón de avance permanece deshabilitado y aparece la lista textual de pendientes. La asesora atiende el control o deja la entrega En curso; no existe opción para omitirlo. Regresa al mismo paso después de resolverlo. Resultado: ningún pase mientras exista un pendiente.
+**FA-01 — Control obligatorio pendiente (pasos 3, 4, 6 o 7).** Al pulsar «Validar y continuar» con controles pendientes, el sistema muestra un aviso y permanece en la fase actual. La asesora atiende el control o deja la entrega En curso; no existe opción para omitirlo. Regresa al mismo paso después de resolverlo. Resultado: ningún pase mientras exista un pendiente.
 
 **FA-02 — Daño o accesorio faltante (pasos 3 o 5; extensión CU-06).**
 
@@ -104,3 +104,41 @@ Postcondición: incidencia resuelta/acordada con historial o entrega suspendida 
 | V-05 Sin conexión | Activar estado simulado offline | Indicador visible y cola pendiente; no se afirma persistencia real |
 
 Las conexiones del nuevo Figma Design se comprobaron mediante 20 escenarios de evaluación de sus reacciones guardadas, incluidos principal, bloqueo y alternos. La prueba manual del reproductor Presentar sigue pendiente. Los escenarios de rendimiento, seguridad y persistencia exigen pruebas futuras de implementación.
+
+## Matriz de permisos — actualización 2.1
+
+| Actor / perfil | Casos y acciones permitidas | Límites |
+|---|---|---|
+| Asesora autenticada | CU-01 a CU-09, CU-11 y CU-12 | No mantener plantillas (CU-10). En la implementación, operar únicamente registros asignados/autorizados. |
+| Administrador autenticado | CU-07, CU-10 y CU-11 | No hereda permisos de asesora: no cotizar, editar expedientes ni ejecutar entregas. |
+| Cliente en vista temporal | CU-05: confirmar o rechazar recepción; CU-06: aceptar o rechazar acuerdo no crítico | Solo la entrega presentada tras cotejo de identidad. Sin tablero, expedientes, pase ni funciones administrativas. |
+| WhatsApp | Participación externa en CU-01 | Recibe únicamente la propuesta revisada mediante la integración autorizada; no inicia sesión en KandoFlow. |
+| Google Workspace | Participación externa en CU-07 | Drive/Sheets mediante autorización corporativa; no tiene una cuenta de usuario humano de KandoFlow. |
+| Sin sesión | Pantalla de inicio y error de credenciales | Ninguna lectura o modificación de información comercial protegida. |
+
+El rol proviene de la cuenta autenticada; no se permite elegirlo libremente. El botón «Cargar cuenta admin · demo» cambia los datos de prueba del prototipo, no asigna privilegios a una cuenta real. El cliente no requiere una cuenta permanente: la asesora coteja identidad e inicia una participación temporal limitada a la entrega actual. Al concluir se oculta esa vista y se exige reautenticar a la asesora antes de recuperar la operación.
+
+El diagrama conserva los doce casos y sus asociaciones. CU-11 ya representa el acceso de asesora y administrador; no se añade un caso por pantalla ni un include de login a cada operación. La participación del cliente permanece en CU-05/CU-06, limitada a sus acciones. El mecanismo de acceso es una precondición; la matriz precisa la autorización.
+
+## Caso detallado CU-11 — Acceder al espacio de trabajo
+
+- **Objetivo:** iniciar una sesión asociada a una cuenta y limitar las operaciones a sus permisos.
+- **Actores:** asesora y administrador.
+- **Requisito:** RF-15; RNF-03 y RNF-09.
+- **Disparador:** abrir KandoFlow o intentar volver a una sesión bloqueada.
+- **Precondición:** cuenta habilitada con rol asignado. Primera autenticación con red; desbloqueo local sujeto al mecanismo seguro de la implementación.
+- **Flujo principal:** (1) mostrar SCR-17; (2) capturar correo y contraseña; (3) validar credenciales y cuenta; (4) obtener los permisos sin aceptar un rol enviado libremente por el usuario; (5) mostrar SCR-07 para asesora o SCR-19 para administrador; (6) comprobar sesión, rol y alcance del registro en cada operación.
+- **FA-11.1 Credenciales inválidas:** SCR-17E muestra un error genérico, no abre sesión y permite reintentar.
+- **FA-11.2 Permiso insuficiente:** SCR-17D informa la denegación, no muestra información protegida ni modifica datos; permite regresar al espacio autorizado o cerrar sesión.
+- **FA-11.3 Inactividad:** tras 15 minutos, SCR-17B oculta datos y requiere autenticación. Figma ofrece un botón para simular el evento; no se afirma temporizador real.
+- **FA-11.4 Cierre:** desde SCR-20 se invalida la sesión y se vuelve a SCR-17.
+- **Postcondición de éxito:** sesión activa con permisos correspondientes a la cuenta.
+- **Garantía mínima:** una autenticación o autorización fallida no concede acceso ni modifica el registro.
+
+### Correspondencia de acceso con Figma
+
+SCR-17: login de asesora; SCR-17A: cuenta demo de administrador; SCR-17E: error; SCR-17B: bloqueo; SCR-17D: denegación; SCR-19: panel de administrador; SCR-20: sesión/cierre; SCR-21: recepción del cliente; SCR-22: acuerdo del cliente; SCR-23: reautenticación de asesora.
+
+En CU-06, «Solicitar conformidad al cliente» abre SCR-22. Aceptar un acuerdo no crítico permite retomar la fase de origen después de SCR-23; rechazar conserva la pausa. Los daños de seguridad nunca se liberan mediante conformidad del cliente.
+
+**Límite:** Figma representa controles de interacción con datos ficticios. Abrir directamente un frame o editar el archivo no equivale a atravesar controles de seguridad reales. La implementación debe aplicar autorización por operación y registro en la capa de negocio y en los servicios remotos; ocultar botones no basta.

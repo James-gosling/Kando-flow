@@ -2,11 +2,11 @@
 
 **Evaluación parcial · Requisitos y prototipo — Unidad 2**  
 **Autor:** Rodrigo Valdespino Vértiz · **Dupla:** Emiliano Cabañas Prieto  
-**Versión documental:** 2.0 · **Actualización:** 29 de septiembre de 2026
+**Versión documental:** 2.1 (adenda de acceso) · **Actualización:** 30 de septiembre de 2026
 
 KandoFlow propone una estación de trabajo móvil para apoyar la atención comercial Mazda: cotizaciones indicativas, expedientes de crédito y entrega vehicular de cinco fases. La solución se plantea como PWA con operación local y respaldo corporativo.
 
-**Estado actual:** paquete de análisis reorganizado; no hay aplicación implementada. El prototipo editable ya contiene 22 pantallas y conexiones verificadas por simulación de sus reacciones. El cierre requiere probar Presentar como evaluador, registrar la revisión final de la dupla y grabar el video. Consulta [la lista de entrega](docs/control-entrega.md).
+**Estado actual:** paquete de análisis reorganizado; no hay aplicación implementada. El prototipo editable ya contiene 31 pantallas y conexiones verificadas por simulación de sus reacciones. El cierre requiere probar Presentar como evaluador, registrar la revisión final de la dupla y grabar el video. Consulta [la lista de entrega](docs/control-entrega.md).
 
 ## Entregables y orden de lectura
 
@@ -28,7 +28,7 @@ KandoFlow propone una estación de trabajo móvil para apoyar la atención comer
 
 El prototipo prioriza **CU-05: Ejecutar entrega vehicular**. La asesora selecciona una entrega, completa preparación, firma, inspección, orientación y recepción para obtener un pase. Si detecta un daño o faltante, **CU-06** pausa la entrega y documenta resolución/acuerdo antes de retomar. Una incidencia bloqueante impide el pase.
 
-[Abrir canvas editable](https://www.figma.com/design/ZuGRFCYIXklddDeCfIklz8?node-id=8-77) · [Abrir prototipo desde la agenda](https://www.figma.com/proto/ZuGRFCYIXklddDeCfIklz8?node-id=3-9&starting-point-node-id=3%3A9). Incluye 22 pantallas, 63 controles con interacción y una guía de trazabilidad en el canvas. Se verificaron 20 escenarios mediante evaluación de las reacciones guardadas; queda la prueba manual de Presentar y acceso externo. [Make original](https://www.figma.com/make/TY4sQ7cz0vhuAj6bc0QSdU/3-Screen-Mobile-Workflow?t=hteUfOLOtM9mPyaq-1) se conserva como referencia; el nuevo diseño fue reconstruido desde la especificación, sin afirmar una importación visual exacta.
+[Abrir canvas editable](https://www.figma.com/design/ZuGRFCYIXklddDeCfIklz8?node-id=8-77) · [Abrir prototipo desde el inicio de sesión](https://www.figma.com/proto/ZuGRFCYIXklddDeCfIklz8?node-id=3-472&starting-point-node-id=3%3A472). Incluye 31 pantallas, 84 nodos con interacción y una guía de trazabilidad en el canvas. Se verificaron 20 escenarios mediante evaluación de las reacciones guardadas; queda la prueba manual de Presentar y acceso externo. [Make original](https://www.figma.com/make/TY4sQ7cz0vhuAj6bc0QSdU/3-Screen-Mobile-Workflow?t=hteUfOLOtM9mPyaq-1) se conserva como referencia; el nuevo diseño fue reconstruido desde la especificación, sin afirmar una importación visual exacta.
 
 ## Arquitectura propuesta
 
@@ -45,3 +45,8 @@ Estas tecnologías describen una futura implementación. No existen todavía `sr
 Todos los documentos activos están en `docs/`; `docs/diagramas/` contiene las dos representaciones del modelo. `docs/historico/` conserva los originales retirados. La especificación 2.0 es la única fuente activa de requisitos: consultar el histórico para evidencia y equivalencias, no como un catálogo adicional.
 
 La documentación previa registra una entrevista simulada con la dupla y su aprobación 1.1. La revisión de la versión 2.0 debe quedar registrada antes de entregar. El repositorio prepara evidencias para los cinco criterios; la calificación final corresponde al docente.
+
+
+## Acceso por rol
+
+La actualización incorpora login, panel de administrador, denegación, cierre, bloqueo simulado y vistas limitadas del cliente con reautenticación de la asesora. CU-11 y RF-15 se precisan en la [matriz de permisos](docs/casos-de-uso.md). Se aprobaron 14 escenarios adicionales de evaluación de reacciones guardadas; autenticación y seguridad reales no están implementadas. La revisión de la dupla debe cubrir también la adenda 2.1.

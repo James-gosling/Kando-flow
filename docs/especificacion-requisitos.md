@@ -190,8 +190,9 @@ Capital P = precio × (1 − enganche); tasa mensual i = tasa anual nominal / 12
 - **Prioridad:** Alta.
 - **Estado:** Propuesto 2.0; revisión final pendiente.
 - **Caso de uso:** CU-11.
-- **Relaciones:** RNF-03; RNF-09; SCR-17.
-- **Criterio de aceptación:** Sin sesión se impide abrir expedientes. Asesora accede a operación, administrador a plantillas/sincronización. Tras 15 minutos sin actividad se bloquea la pantalla y se exige autenticación para volver a datos sensibles. Cualquier escritura rechazada por rol no cambia los datos.
+- **Relaciones:** RNF-03; RNF-09; SCR-17 y variantes, SCR-19 a SCR-23.
+- **Actualización 2.1 (30/09/2026):** solicitud del autor tras observación de la docente; matriz de permisos en [casos de uso](casos-de-uso.md). No constituye validación de agencia ni aprobación de la dupla.
+- **Criterio de aceptación:** Sin sesión no se permite leer ni modificar información comercial protegida. Credenciales válidas obtienen el rol de la cuenta: asesora accede a CU-01 a CU-09, CU-11 y CU-12; administrador únicamente a CU-07, CU-10 y CU-11. Una operación no permitida muestra Acceso denegado sin revelar datos ni cambiarlos. Comprobar también el alcance del registro, no solo el menú. El cliente solo confirma recepción o acepta/rechaza acuerdos no críticos de la entrega presentada, en vista temporal iniciada por la asesora; salir exige reautenticación de la asesora. Tras 15 minutos sin actividad se bloquea la sesión. Cerrar sesión revoca el acceso. Probar enlaces directos y solicitudes manipuladas en la implementación; Figma únicamente simula navegación y estado.
 
 <a id="rf-16"></a>
 ### RF-16 — Reservar prueba de manejo
@@ -365,3 +366,8 @@ La [especificación v1.1](historico/especificacion-v1.1.md) registra a **Emilian
 | Dictamen y conformidad | Pendiente; no se atribuye una aprobación nueva |
 
 La revisión debe comprobar orígenes H/S, aceptación por RF, métricas RNF, relaciones del diagrama, alternos de CU-05 y navegación real. Registrar discrepancias en [control de cambios](control-cambios.md).
+
+
+## Adenda de versión 2.1 — Acceso por rol
+
+30 de septiembre de 2026: se precisa RF-15 y CU-11. Los demás requisitos conservan su numeración. La revisión final de la dupla debe incluir esta adenda; permanece pendiente.

@@ -52,3 +52,8 @@ Los documentos previos permanecen en [histórico](historico/README.md). Las preg
 ## 5. Prototipo nativo — 29 de septiembre de 2026
 
 Se creó Figma Design editable con 22 pantallas, 63 nodos con interacción y guía de trazabilidad. Se evaluaron 20 escenarios contra las reacciones guardadas y se revisaron visualmente pantallas representativas. Se conservó Make como referencia; no se declara una conversión visual exacta. El avance se bloquea mediante validación condicional al pulsar el botón; el pase revalida los 16 controles. Se actualizaron enlaces y estados documentales. Prueba manual de Presentar, acceso externo, revisión de la dupla y video siguen pendientes.
+
+
+## 6. Adenda 2.1 — 30 de septiembre de 2026
+
+Solicitud del autor tras observación de la docente: demostrar inicio de sesión y restricción de casos por actor. RF-15 y CU-11 precisan cuenta/rol, autorización de operaciones, cierre, bloqueo y errores. Figma pasa de 22 a 31 pantallas, con 84 nodos interactivos. Cliente limitado a recepción/acuerdo y reautenticación posterior de asesora. Catorce escenarios de evaluación de reacciones guardadas pasaron. Se corrige FA-01 para describir aviso al pulsar y bloqueo de navegación, coherente con Figma. No se cambian IDs/asociaciones del diagrama. Pendientes: Presentar manual, revisión 2.1, video e implementación real de autenticación/autorización.

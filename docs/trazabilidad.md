@@ -22,7 +22,7 @@ La columna Origen remite a [hallazgos H y supuestos S](guion-entrevista.md). Los
 | [RF-12](especificacion-requisitos.md#rf-12) Emitir pase de salida | Supuesto del resumen previo; S-05 pendiente con la agencia. | CU-05 | SCR-08 a SCR-13 | Con Fases 1–4 completas, controles de Fase 5 completos y cero incidencias bloqueantes, generar un único pase por entrega con ID, VIN, fecha UTC y operador |
 | [RF-13](especificacion-requisitos.md#rf-13) Abrir PDF protegido con clave autorizada | H-02 (dupla en rol); no se presupone que todos los bancos utilicen RFC. | CU-02 | SCR-03 | Clave correcta permite incorporar el archivo; incorrecta muestra error sin perder el original |
 | [RF-14](especificacion-requisitos.md#rf-14) Administrar plantilla documental | Supuesto de la visión; requiere validación administrativa. | CU-10 | SCR-16 | Administrador carga plantilla y mapea campos obligatorios; previsualización con datos ficticios sin campos sin resolver habilita su activación |
-| [RF-15](especificacion-requisitos.md#rf-15) Controlar acceso por rol | Supuesto técnico de la visión; S-06. | CU-11 | SCR-17 | Sin sesión se impide abrir expedientes |
+| [RF-15](especificacion-requisitos.md#rf-15) Controlar acceso por rol | Supuesto técnico de la visión; S-06. | CU-11 | SCR-17 y variantes; SCR-19 a SCR-23 | Cuenta determina rol; denegar operaciones fuera de la matriz, aislar participación del cliente y revocar acceso al cerrar/bloquear |
 | [RF-16](especificacion-requisitos.md#rf-16) Reservar prueba de manejo | Supuesto explícito de la visión previa; S-05. | CU-12 | SCR-18 | Sin licencia registrada y vigente a la fecha de prueba, rechazar reserva |
 | [RF-17](especificacion-requisitos.md#rf-17) Sincronizar bitácora en Sheets | Decisión técnica heredada de RF-08 v1.1; S-03. | CU-07 | SCR-15 | Fila incluye ID/versión, fecha, referencia del prospecto, VIN y estado; no incluir documentos ni claves |
 
@@ -62,3 +62,8 @@ Los límites son propuestas técnicas, no resultados medidos. Usabilidad visual 
 Todos los RF tienen CU y pantalla prevista; todos los CU del diagrama tienen al menos un RF. Las vistas de apoyo están enlazadas para contextualizar funciones fuera de la entrega; contienen ejemplos fijos, sin ejecución de servicios reales. Figma debe validar al menos el flujo principal completo y uno alterno para satisfacer la rúbrica; el video debe mostrar este hilo explícitamente.
 
 Las relaciones previas incompatibles se conservaron solo en [histórico](historico/README.md); su migración está en [control de cambios](control-cambios.md).
+
+
+## Adenda 2.1 — Permisos
+
+Observación docente comunicada por el autor el 30/09/2026 → RF-15 → CU-11 → SCR-17 y variantes / SCR-19 / SCR-20. La participación limitada del cliente conecta RF-06/RF-07/RF-15 → CU-05/CU-06 → SCR-21/SCR-22/SCR-23. Se conserva la numeración del diagrama y se precisa el alcance por actor en la matriz de permisos. Verificación: 14 escenarios de reacciones guardadas aprobados; Presentar y seguridad de implementación pendientes.
