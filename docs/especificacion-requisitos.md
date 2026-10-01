@@ -8,7 +8,7 @@
 
 Esta es la única especificación vigente. El [documento de visión](vision-del-producto.md) fija el alcance; los documentos de [histórico](historico/README.md) no constituyen requisitos adicionales. Se conserva la numeración RF-01 a RF-08 de la especificación v1.1 y se separan responsabilidades antes combinadas. La equivalencia con el otro catálogo se documenta en [control de cambios](control-cambios.md).
 
-RF identifica una capacidad funcional; RNF, una condición de calidad; RN, una regla de negocio; CU, un objetivo de actor; SCR, una pantalla prevista. El PDF aportado contiene la rúbrica, no la plantilla de fichas del curso: estos campos deberán cotejarse con dicha plantilla si existe una distinta.
+RF identifica una capacidad funcional; RNF, una condición de calidad; RN, una regla de negocio; CU, un objetivo de actor; SCR, una pantalla prevista. El formato de referencia es el documentado en este repositorio; no se requiere una plantilla externa.
 
 **Origen:** H-xx refiere a la [bitácora de simulación](guion-entrevista.md), no a confirmación directa del cliente real. S-xx identifica supuestos pendientes. Cada ficha tiene estado **Propuesto 2.0**; ninguna se etiqueta Implementado o Probado. Las prioridades ordenan trabajo y no eliminan requisitos del alcance.
 
@@ -374,10 +374,18 @@ La revisión debe comprobar orígenes H/S, aceptación por RF, métricas RNF, re
 
 
 
-## Cotejo con la plantilla del curso — pendiente
+## Cotejo de nomenclatura y fichas del repositorio
 
-**Estado:** [pendiente: adjuntar la plantilla/instrucciones completas del curso y, si corresponde, el documento consolidado cuyas secciones 4, 5 y 6 se desea ajustar].
+**Referencia:** documentación vigente del repositorio y requisitos de entrega registrados en [control de entrega](control-entrega.md). Según aclaración del autor, no dispone de una plantilla externa. Este cotejo comprueba la consistencia del formato existente; no atribuye al curso campos que no estén documentados.
 
-No se ha realizado el cotejo de campos, nomenclatura RF/RNF/CU ni estructura de fichas contra la plantilla, porque no está disponible en esta solicitud. Se conservan fichas, IDs y enlaces. En el repositorio, RF y RNF están en este archivo y los CU en casos-de-uso.md; esa distribución no identifica por sí sola las secciones 4–6 del documento consolidado mencionado.
+| Elemento | Ubicación vigente | Resultado del cotejo |
+|---|---|---|
+| Requisitos funcionales | Sección 3 de este archivo | RF-01 a RF-17, sin saltos ni duplicados. Las 17 fichas incluyen formulación, origen y grado de confirmación, prioridad, estado, caso de uso, relaciones y criterio de aceptación. RF-15 conserva además su actualización 2.1. |
+| Requisitos no funcionales | Sección 4 de este archivo | RNF-01 a RNF-11, sin saltos ni duplicados. Las 11 fichas incluyen formulación y métrica, método de verificación, justificación del límite, origen, prioridad, estado y relaciones. |
+| Casos de uso | [Catálogo y casos detallados](casos-de-uso.md) | CU-01 a CU-12. El catálogo identifica objetivo, actores y RF; CU-05 documenta disparador, precondiciones, flujos principal y alternos, garantías, postcondiciones, reglas, origen y pantallas. La adenda conserva CU-11 detallado y la matriz de permisos. |
 
-Al recibir la plantilla, se registrará por campo: denominación exigida, correspondencia con el contenido existente, ajuste de formato y dato faltante como [pendiente: qué falta]. No se deducirán campos exigidos ni se declarará conformidad sin revisar la fuente.
+La distribución vigente separa requisitos y casos de uso en archivos. Se mantienen sus secciones, códigos y enlaces; no se renumeran como secciones 4–6 de un documento único que no forma parte de esta estructura.
+
+**Cambios:** se elimina la solicitud de una plantilla externa y se registra el cotejo de campos y nomenclatura con el formato del repositorio. No fue necesario modificar el contenido de las fichas.
+
+**Pendientes de evidencia:** [pendiente: aplicar la entrevista con la asesora y registrar sus respuestas]; [pendiente: ejecutar y registrar las pruebas manuales del prototipo]; [pendiente: registrar la revisión de la dupla sobre la versión vigente, incluida la adenda 2.1]. Los supuestos de negocio y las métricas técnicas conservan sus estados de validación actuales.

@@ -2,14 +2,14 @@
 
 **Base:** rúbrica proporcionada por el autor, «Evaluación Parcial - Requisitos y Prototipo», Ingeniería de Software I, consultada el 29 de septiembre de 2026. Contiene cinco criterios de 5 puntos; Nivel 4 corresponde a 25 puntos mínimos. Las instrucciones del curso aportadas indican video de 6–8 minutos y revisión de la dupla como requisito previo.
 
-Este documento es una comprobación de evidencias, no una autoasignación de 25 puntos. El archivo recibido contiene la rúbrica; no incluye la página completa de instrucciones ni una plantilla detallada de fichas.
+Este documento es una comprobación de evidencias, no una autoasignación de 25 puntos. El formato de fichas y la nomenclatura se revisan con la documentación vigente del repositorio, según aclaración del autor; no se solicita una plantilla externa.
 
 ## 1. Cobertura del nivel Excelente
 
 | Criterio, 5 puntos cada uno | Evidencia preparada | Qué falta para sostener el máximo |
 |---|---|---|
 | Elicitación | Ficha, cinco tramos, bitácora con supuestos refutados y hallazgos inesperados; original preservado | Aplicar/registrar el guion neutral revisado con la dupla; distinguir simulación de confirmación real |
-| Requisitos funcionales | 17 fichas, formulación firme, origen H/S, prioridades, relaciones y aceptación | Cotejar campos con plantilla exacta del curso; revisión de la dupla sobre 2.0 |
+| Requisitos funcionales | 17 fichas, formulación firme, origen H/S, prioridades, relaciones y aceptación | Revisión de la dupla sobre la versión vigente, incluida la adenda 2.1 |
 | Requisitos no funcionales | 11 fichas con métrica, justificación y método; rendimiento, seguridad, fiabilidad, usabilidad, compatibilidad, mantenibilidad | Revisión de pertinencia con la dupla; pruebas de implementación no exigibles como software ya construido en este parcial |
 | Casos de uso | Diagrama .drawio/.png coherente; CU-05 detallado y alternos con retorno/postcondiciones | Revisión académica final de notación y reglas de negocio |
 | Prototipo y video | Figma Design con 31 pantallas y guía; 20 escenarios de lógica comprobados, recorridos V-01 a V-05 | Probar Presentar/acceso externo y grabar/entregar video de 6–8 minutos con principal + alterno y trazabilidad visible |
@@ -30,7 +30,7 @@ Este documento es una comprobación de evidencias, no una autoasignación de 25 
 - [x] Veinte escenarios de lógica comprobados sobre reacciones guardadas; sin destinos rotos.
 - [ ] Figma accesible para el evaluador y prueba manual en Presentar de V-01 a V-04.
 - [ ] Video grabado, duración comprobada y acceso probado.
-- [ ] Plantilla/nomenclatura y estructura cotejadas contra instrucciones completas si añaden condiciones al resumen.
+- [x] Campos, nomenclatura RF/RNF/CU y estructura cotejados con el formato vigente del repositorio; registro en [especificación](especificacion-requisitos.md).
 
 ## 3. Orden para cerrar los pendientes
 
