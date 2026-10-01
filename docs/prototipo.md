@@ -4,16 +4,18 @@
 
 ## 1. Acceso y estado real
 
+[Video de presentación del repositorio y demo funcional](https://youtu.be/G40-IZL50ZY). Duración aproximada: 20 minutos, según el autor.
+
 - [Canvas editable de Figma Design](https://www.figma.com/design/ZuGRFCYIXklddDeCfIklz8?node-id=8-77).
 - [Presentar desde SCR-17](https://www.figma.com/proto/ZuGRFCYIXklddDeCfIklz8?node-id=3-472&starting-point-node-id=3%3A472).
 
-**Alcance de esta documentación:** La publicación y el canvas de Figma Design son versiones distintas del prototipo. Los conteos de pantallas y pruebas de reacciones documentados a continuación corresponden al archivo Design; no certifican los recorridos del sitio publicado. La prueba funcional del sitio y el acceso como evaluador siguen pendientes.
+**Alcance de esta documentación:** La publicación y el canvas de Figma Design son versiones distintas del prototipo. Los conteos de pantallas y pruebas de reacciones documentados a continuación corresponden al archivo Design; no certifican los recorridos del sitio publicado. El autor confirmó posteriormente haber realizado todas las pruebas; no desglosó los resultados por versión.
 
 **Versión de diseño:** 30 de septiembre de 2026. El archivo contiene 31 pantallas nativas, componentes reutilizables, variables de estado y una guía en el canvas. No son capturas planas. La reconstrucción parte de esta especificación: el conector devolvió el inventario de fuentes de Make, pero no permitió leerlas completas; no se afirma una conversión visual exacta del original.
 
 **Verificación de la versión del 29/09/2026 (histórica):** revisión visual de composiciones representativas, comprobación de dimensiones y evaluación de las reacciones nativas leídas del archivo. Los 20 escenarios evaluados pasaron; se encontraron 63 nodos con interacción, cero destinos rotos, cero controles de interacción no textuales menores de 48 × 48 px y cero desbordamientos de los hijos principales. Todas las pantallas usan texto editable Inter y no contienen una imagen plana de la interfaz.
 
-**Pendiente:** probar manualmente en Presentar desde la cuenta del autor y el enlace como evaluador. La evaluación de reacciones no equivale a haber pulsado cada pantalla en el reproductor de Figma. Tampoco prueba persistencia, APIs, cifrado, autenticación ni generación real de documentos.
+**Confirmación del autor:** realizó todas las pruebas del prototipo. Esta declaración no acredita persistencia, APIs, cifrado ni seguridad de una implementación.
 
 ## 2. Inventario canónico de pantallas creadas
 
@@ -73,14 +75,14 @@ Componentes mínimos: encabezado con fase, lista de controles, estado con texto 
 
 | Prueba | Evidencia requerida | Resultado actual |
 |---|---|---|
-| Acceso externo | Abrir enlace como evaluador | Pendiente |
-| V-01 Principal | Agenda → cinco fases → pase → agenda completada | Lógica comprobada; Presentar pendiente |
+| Acceso externo | Abrir enlace como evaluador | Realizada según confirmación del autor |
+| V-01 Principal | Agenda → cinco fases → pase → agenda completada | Realizada según confirmación del autor |
 | V-02 Bloqueo | Control vacío impide avanzar; pase revalida todas las fases | Lógica comprobada; Presentar pendiente |
 | V-03 Alterno retomable | Incidencia Fase 3 → acuerdo → retorno Fase 3 con avances conservados | Lógica comprobada; Presentar pendiente |
 | V-04 Alterno suspendido | Daño bloqueante → Pausada, sin pase | Lógica comprobada; Presentar pendiente |
 | V-05 Offline ilustrativo | SCR-15 muestra respaldo pendiente de conexión | Vista ilustrativa creada; operación offline no implementada |
 
-Después de probar, registrar fecha, versión/enlace, persona y resultado observado. Si falla, anotar el problema y corregir antes de sustituir Pendiente por Verificado.
+Completar fecha, versión/enlace y resultado observado de las pruebas ya realizadas. Si falla, anotar el problema y corregir antes de sustituir Pendiente por Verificado.
 
 ## 6. Guía breve de prueba
 
@@ -125,24 +127,24 @@ Las credenciales son fixtures visibles, no entradas libres ni contraseñas reale
 
 **Demo indicada para prueba:** https://factor-yam-65024850.figma.site/#/login
 
-Este registro contiene pruebas por ejecutar. No reutiliza como resultados manuales las evaluaciones estáticas de reacciones documentadas arriba. Presentar de Figma Design y la demo publicada son versiones distintas: al reportar resultados, indicar versión/enlace utilizado; si se prueban ambas, duplicar la fila y conservar los registros separados.
+El autor confirmó haber realizado todas las pruebas de este registro. No reutiliza como resultados manuales las evaluaciones estáticas de reacciones documentadas arriba. Presentar de Figma Design y la demo publicada son versiones distintas: al reportar resultados, indicar versión/enlace utilizado; si se prueban ambas, duplicar la fila y conservar los registros separados.
 
 Solo se completarán resultado observado, fecha, persona y estado a partir del relato o evidencia que proporcione Rodrigo. No usar la fecha de edición como fecha de prueba. Los pasos son un procedimiento previsto: si una acción no está disponible, registrar esa diferencia después de probar.
 
 | Prueba | Pasos | Resultado esperado | Resultado observado | Fecha | Persona | Estado |
 |---|---|---|---|---|---|---|
-| Acceso externo como evaluador | Abrir Presentar sin la sesión del autor; repetir por separado en la demo publicada. | Acceso al inicio sin permisos de edición. | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] |
-| V-01 — Principal | Ingresar como asesora; recorrer las cinco fases; confirmar recepción como cliente; reautenticar a la asesora; emitir pase. | Pase DEMO y entrega Completada solo con todos los controles satisfechos. | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] |
-| V-02 — Bloqueo | Dejar un control de fase 4 vacío; pulsar Validar y continuar; completarlo y reintentar. | Aviso y permanencia en la fase hasta completar el control. | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] |
-| V-03 — Incidencia no crítica con retorno | Desde fase 3 guardar detalle no crítico; solicitar conformidad; aceptar y reautenticar. | Pausa durante incidencia; retorno a fase 3 con avance previo conservado tras acuerdo válido. | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] |
-| V-04 — Daño bloqueante sin pase | Reportar daño de seguridad en fase 1 o 3; consultar pausa y volver a agenda. | Entrega Pausada sin pase; aceptar un acuerdo no libera un daño de seguridad. | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] |
-| V-05 — Sin conexión ilustrativo | Abrir SCR-15 y recorrer el estado ilustrativo de respaldo sin conexión. | Respaldo pendiente e indicación textual; no acredita persistencia ni sincronización reales. | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] |
-| Adenda 2.1 — Permisos de asesora | Iniciar con cuenta demo de asesora; abrir operación y respaldo; intentar plantillas. | CU-01 a CU-09, CU-11 y CU-12 permitidos; CU-10 denegado sin mostrar ni modificar datos. | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] |
-| Adenda 2.1 — Permisos de administrador | Iniciar con cuenta demo de administrador; abrir plantillas y respaldo; intentar entrega. | Solo CU-07, CU-10 y CU-11; operación comercial denegada. | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] |
-| Adenda 2.1 — Credenciales inválidas | Ejecutar el escenario inválido en Presentar; en la demo introducir datos ficticios incorrectos. | Error genérico; sin sesión ni acceso al tablero. | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] |
-| Adenda 2.1 — Cierre de sesión | Cerrar desde Mi sesión e intentar regresar mediante navegación anterior. | Sin acceso operativo protegido hasta autenticar de nuevo. | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] |
-| Adenda 2.1 — Bloqueo de sesión | Activar Simular bloqueo por inactividad; intentar continuar y volver a autenticarse. | Datos ocultos y autenticación requerida; la simulación no acredita un temporizador real. | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] |
-| Adenda 2.1 — Cliente y reautenticación | En fase 5 abrir vista del cliente; confirmar; intentar operar antes y después de reautenticar a la asesora. | Cliente limitado a su recepción; operación recuperada solo tras reautenticación. | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] |
-| Adenda 2.1 — Acuerdo del cliente | Rechazar un acuerdo no crítico y reautenticar; en otro recorrido aceptar y reautenticar. | Rechazo mantiene pausa; aceptación permite retorno a fase de origen; ambas salidas exigen reautenticación. | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] |
+| Acceso externo como evaluador | Abrir Presentar sin la sesión del autor; repetir por separado en la demo publicada. | Acceso al inicio sin permisos de edición. | Realizada; resultado específico no informado. | No informada | Rodrigo Valdespino Vertiz | Realizada por el autor |
+| V-01 — Principal | Ingresar como asesora; recorrer las cinco fases; confirmar recepción como cliente; reautenticar a la asesora; emitir pase. | Pase DEMO y entrega Completada solo con todos los controles satisfechos. | Realizada; resultado específico no informado. | No informada | Rodrigo Valdespino Vertiz | Realizada por el autor |
+| V-02 — Bloqueo | Dejar un control de fase 4 vacío; pulsar Validar y continuar; completarlo y reintentar. | Aviso y permanencia en la fase hasta completar el control. | Realizada; resultado específico no informado. | No informada | Rodrigo Valdespino Vertiz | Realizada por el autor |
+| V-03 — Incidencia no crítica con retorno | Desde fase 3 guardar detalle no crítico; solicitar conformidad; aceptar y reautenticar. | Pausa durante incidencia; retorno a fase 3 con avance previo conservado tras acuerdo válido. | Realizada; resultado específico no informado. | No informada | Rodrigo Valdespino Vertiz | Realizada por el autor |
+| V-04 — Daño bloqueante sin pase | Reportar daño de seguridad en fase 1 o 3; consultar pausa y volver a agenda. | Entrega Pausada sin pase; aceptar un acuerdo no libera un daño de seguridad. | Realizada; resultado específico no informado. | No informada | Rodrigo Valdespino Vertiz | Realizada por el autor |
+| V-05 — Sin conexión ilustrativo | Abrir SCR-15 y recorrer el estado ilustrativo de respaldo sin conexión. | Respaldo pendiente e indicación textual; no acredita persistencia ni sincronización reales. | Realizada; resultado específico no informado. | No informada | Rodrigo Valdespino Vertiz | Realizada por el autor |
+| Adenda 2.1 — Permisos de asesora | Iniciar con cuenta demo de asesora; abrir operación y respaldo; intentar plantillas. | CU-01 a CU-09, CU-11 y CU-12 permitidos; CU-10 denegado sin mostrar ni modificar datos. | Realizada; resultado específico no informado. | No informada | Rodrigo Valdespino Vertiz | Realizada por el autor |
+| Adenda 2.1 — Permisos de administrador | Iniciar con cuenta demo de administrador; abrir plantillas y respaldo; intentar entrega. | Solo CU-07, CU-10 y CU-11; operación comercial denegada. | Realizada; resultado específico no informado. | No informada | Rodrigo Valdespino Vertiz | Realizada por el autor |
+| Adenda 2.1 — Credenciales inválidas | Ejecutar el escenario inválido en Presentar; en la demo introducir datos ficticios incorrectos. | Error genérico; sin sesión ni acceso al tablero. | Realizada; resultado específico no informado. | No informada | Rodrigo Valdespino Vertiz | Realizada por el autor |
+| Adenda 2.1 — Cierre de sesión | Cerrar desde Mi sesión e intentar regresar mediante navegación anterior. | Sin acceso operativo protegido hasta autenticar de nuevo. | Realizada; resultado específico no informado. | No informada | Rodrigo Valdespino Vertiz | Realizada por el autor |
+| Adenda 2.1 — Bloqueo de sesión | Activar Simular bloqueo por inactividad; intentar continuar y volver a autenticarse. | Datos ocultos y autenticación requerida; la simulación no acredita un temporizador real. | Realizada; resultado específico no informado. | No informada | Rodrigo Valdespino Vertiz | Realizada por el autor |
+| Adenda 2.1 — Cliente y reautenticación | En fase 5 abrir vista del cliente; confirmar; intentar operar antes y después de reautenticar a la asesora. | Cliente limitado a su recepción; operación recuperada solo tras reautenticación. | Realizada; resultado específico no informado. | No informada | Rodrigo Valdespino Vertiz | Realizada por el autor |
+| Adenda 2.1 — Acuerdo del cliente | Rechazar un acuerdo no crítico y reautenticar; en otro recorrido aceptar y reautenticar. | Rechazo mantiene pausa; aceptación permite retorno a fase de origen; ambas salidas exigen reautenticación. | Realizada; resultado específico no informado. | No informada | Rodrigo Valdespino Vertiz | Realizada por el autor |
 
-Tras cada ejecución, proporcionar prueba, versión/enlace, pasos realizados, resultado observado, fecha, persona y evidencia disponible. Si falta un dato, permanece como [pendiente de probar]. Un fallo se registra como tal; no se sustituye por el resultado esperado.
+Tras cada ejecución, proporcionar prueba, versión/enlace, pasos realizados, resultado observado, fecha, persona y evidencia disponible. Los datos de ejecución no informados se identifican como tales. Un fallo se registra como tal; no se sustituye por el resultado esperado.

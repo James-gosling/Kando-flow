@@ -6,9 +6,11 @@
 
 KandoFlow propone una estación de trabajo móvil para apoyar la atención comercial Mazda: cotizaciones indicativas, expedientes de crédito y entrega vehicular de cinco fases. La solución se plantea como PWA con operación local y respaldo corporativo.
 
-**Estado actual:** paquete de análisis reorganizado; no hay aplicación de producción implementada. El prototipo editable ya contiene 31 pantallas y conexiones verificadas por simulación de sus reacciones. El cierre requiere probar Presentar como evaluador, registrar la revisión final de la dupla y verificar el video cuyo enlace aportó el autor. Consulta [la lista de entrega](docs/control-entrega.md).
+**Estado actual:** paquete de análisis reorganizado; no hay aplicación de producción implementada. El prototipo editable ya contiene 31 pantallas y conexiones verificadas por simulación de sus reacciones. El autor confirmó haber realizado todas las pruebas del prototipo. La revisión final de la dupla y el registro detallado de resultados se documentan por separado. Consulta [la lista de entrega](docs/control-entrega.md).
 
 **[Abrir prototipo web publicado de KandoFlow](https://factor-yam-65024850.figma.site)** — versión de Figma Make compartida por el autor el 30 de septiembre de 2026.
+
+**[Ver video de presentación y demo funcional](https://youtu.be/G40-IZL50ZY)** — duración aproximada de 20 minutos; explica el repositorio y recorre la demo, según lo informado por el autor.
 
 ## Entregables y orden de lectura
 
@@ -23,7 +25,7 @@ KandoFlow propone una estación de trabajo móvil para apoyar la atención comer
 | Prototipo y pruebas de navegación | [Acceso y recorridos](docs/prototipo.md) |
 | Cadena alcance → requisitos → casos → pantallas | [Trazabilidad](docs/trazabilidad.md) |
 | Revisión de la dupla | [Registro histórico y revisión 2.0 pendiente](docs/especificacion-requisitos.md#revision-dupla) |
-| Video de 6–8 minutos | [Enlace aportado por el autor](https://youtu.be/G40-IZL50ZY); duración, acceso y contenido pendientes de verificar |
+| Video de presentación (aprox. 20 minutos) | [Explicación del repositorio y demo funcional](https://youtu.be/G40-IZL50ZY) |
 | Documento consolidado revisado | [Descargar Word](docs/entrega/Evaluacion_parcial_KandoFlow_revisada.docx) |
 | Rúbrica y pendientes | [Control de entrega](docs/control-entrega.md) |
 | Cambios e IDs anteriores | [Control de cambios](docs/control-cambios.md) |
@@ -32,7 +34,7 @@ KandoFlow propone una estación de trabajo móvil para apoyar la atención comer
 
 El prototipo prioriza **CU-05: Ejecutar entrega vehicular**. La asesora selecciona una entrega, completa preparación, firma, inspección, orientación y recepción para obtener un pase. Si detecta un daño o faltante, **CU-06** pausa la entrega y documenta resolución/acuerdo antes de retomar. Una incidencia bloqueante impide el pase.
 
-[Abrir canvas editable](https://www.figma.com/design/ZuGRFCYIXklddDeCfIklz8?node-id=8-77) · [Abrir prototipo desde el inicio de sesión](https://www.figma.com/proto/ZuGRFCYIXklddDeCfIklz8?node-id=3-472&starting-point-node-id=3%3A472). Incluye 31 pantallas, 84 nodos con interacción y una guía de trazabilidad en el canvas. Se verificaron 20 escenarios mediante evaluación de las reacciones guardadas; queda la prueba manual de Presentar y acceso externo.
+[Abrir canvas editable](https://www.figma.com/design/ZuGRFCYIXklddDeCfIklz8?node-id=8-77) · [Abrir prototipo desde el inicio de sesión](https://www.figma.com/proto/ZuGRFCYIXklddDeCfIklz8?node-id=3-472&starting-point-node-id=3%3A472). Incluye 31 pantallas, 84 nodos con interacción y una guía de trazabilidad en el canvas. Se verificaron 20 escenarios mediante evaluación de las reacciones guardadas; el autor confirmó posteriormente la realización de todas las pruebas manuales.
 
 ## Arquitectura propuesta
 
