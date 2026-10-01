@@ -119,3 +119,30 @@ El archivo contiene 31 pantallas y 84 nodos con reacciones. Se evaluaron 14 esce
 5. En recepción o acuerdo, entregar el dispositivo al cliente en la vista limitada. Confirmar/rechazar y comprobar que exige reautenticar a la asesora.
 
 Las credenciales son fixtures visibles, no entradas libres ni contraseñas reales. El rol numérico del prototipo representa sin sesión, asesora, administrador y cliente temporal. El temporizador de 15 minutos se demuestra mediante un botón; no se implementó un temporizador real. Los servicios externos no usan este login. La seguridad efectiva y la autorización de registros deberán implementarse y probarse fuera de Figma.
+
+
+### 7.1. Registro de pruebas manuales en modo Presentar
+
+**Demo indicada para prueba:** https://factor-yam-65024850.figma.site/#/login
+
+Este registro contiene pruebas por ejecutar. No reutiliza como resultados manuales las evaluaciones estáticas de reacciones documentadas arriba. Presentar de Figma Design y la demo publicada son versiones distintas: al reportar resultados, indicar versión/enlace utilizado; si se prueban ambas, duplicar la fila y conservar los registros separados.
+
+Solo se completarán resultado observado, fecha, persona y estado a partir del relato o evidencia que proporcione Rodrigo. No usar la fecha de edición como fecha de prueba. Los pasos son un procedimiento previsto: si una acción no está disponible, registrar esa diferencia después de probar.
+
+| Prueba | Pasos | Resultado esperado | Resultado observado | Fecha | Persona | Estado |
+|---|---|---|---|---|---|---|
+| Acceso externo como evaluador | Abrir Presentar sin la sesión del autor; repetir por separado en la demo publicada. | Acceso al inicio sin permisos de edición. | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] |
+| V-01 — Principal | Ingresar como asesora; recorrer las cinco fases; confirmar recepción como cliente; reautenticar a la asesora; emitir pase. | Pase DEMO y entrega Completada solo con todos los controles satisfechos. | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] |
+| V-02 — Bloqueo | Dejar un control de fase 4 vacío; pulsar Validar y continuar; completarlo y reintentar. | Aviso y permanencia en la fase hasta completar el control. | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] |
+| V-03 — Incidencia no crítica con retorno | Desde fase 3 guardar detalle no crítico; solicitar conformidad; aceptar y reautenticar. | Pausa durante incidencia; retorno a fase 3 con avance previo conservado tras acuerdo válido. | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] |
+| V-04 — Daño bloqueante sin pase | Reportar daño de seguridad en fase 1 o 3; consultar pausa y volver a agenda. | Entrega Pausada sin pase; aceptar un acuerdo no libera un daño de seguridad. | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] |
+| V-05 — Sin conexión ilustrativo | Abrir SCR-15 y recorrer el estado ilustrativo de respaldo sin conexión. | Respaldo pendiente e indicación textual; no acredita persistencia ni sincronización reales. | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] |
+| Adenda 2.1 — Permisos de asesora | Iniciar con cuenta demo de asesora; abrir operación y respaldo; intentar plantillas. | CU-01 a CU-09, CU-11 y CU-12 permitidos; CU-10 denegado sin mostrar ni modificar datos. | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] |
+| Adenda 2.1 — Permisos de administrador | Iniciar con cuenta demo de administrador; abrir plantillas y respaldo; intentar entrega. | Solo CU-07, CU-10 y CU-11; operación comercial denegada. | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] |
+| Adenda 2.1 — Credenciales inválidas | Ejecutar el escenario inválido en Presentar; en la demo introducir datos ficticios incorrectos. | Error genérico; sin sesión ni acceso al tablero. | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] |
+| Adenda 2.1 — Cierre de sesión | Cerrar desde Mi sesión e intentar regresar mediante navegación anterior. | Sin acceso operativo protegido hasta autenticar de nuevo. | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] |
+| Adenda 2.1 — Bloqueo de sesión | Activar Simular bloqueo por inactividad; intentar continuar y volver a autenticarse. | Datos ocultos y autenticación requerida; la simulación no acredita un temporizador real. | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] |
+| Adenda 2.1 — Cliente y reautenticación | En fase 5 abrir vista del cliente; confirmar; intentar operar antes y después de reautenticar a la asesora. | Cliente limitado a su recepción; operación recuperada solo tras reautenticación. | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] |
+| Adenda 2.1 — Acuerdo del cliente | Rechazar un acuerdo no crítico y reautenticar; en otro recorrido aceptar y reautenticar. | Rechazo mantiene pausa; aceptación permite retorno a fase de origen; ambas salidas exigen reautenticación. | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] | [pendiente de probar] |
+
+Tras cada ejecución, proporcionar prueba, versión/enlace, pasos realizados, resultado observado, fecha, persona y evidencia disponible. Si falta un dato, permanece como [pendiente de probar]. Un fallo se registra como tal; no se sustituye por el resultado esperado.

@@ -371,3 +371,13 @@ La revisión debe comprobar orígenes H/S, aceptación por RF, métricas RNF, re
 ## Adenda de versión 2.1 — Acceso por rol
 
 30 de septiembre de 2026: se precisa RF-15 y CU-11. Los demás requisitos conservan su numeración. La revisión final de la dupla debe incluir esta adenda; permanece pendiente.
+
+
+
+## Cotejo con la plantilla del curso — pendiente
+
+**Estado:** [pendiente: adjuntar la plantilla/instrucciones completas del curso y, si corresponde, el documento consolidado cuyas secciones 4, 5 y 6 se desea ajustar].
+
+No se ha realizado el cotejo de campos, nomenclatura RF/RNF/CU ni estructura de fichas contra la plantilla, porque no está disponible en esta solicitud. Se conservan fichas, IDs y enlaces. En el repositorio, RF y RNF están en este archivo y los CU en casos-de-uso.md; esa distribución no identifica por sí sola las secciones 4–6 del documento consolidado mencionado.
+
+Al recibir la plantilla, se registrará por campo: denominación exigida, correspondencia con el contenido existente, ajuste de formato y dato faltante como [pendiente: qué falta]. No se deducirán campos exigidos ni se declarará conformidad sin revisar la fuente.
