@@ -12,7 +12,7 @@ Este documento es una comprobación de evidencias, no una autoasignación de 25 
 | Requisitos funcionales | 17 fichas, formulación firme, origen H/S, prioridades, relaciones y aceptación | Revisión de la dupla sobre la versión vigente, incluida la adenda 2.1 |
 | Requisitos no funcionales | 11 fichas con métrica, justificación y método; rendimiento, seguridad, fiabilidad, usabilidad, compatibilidad, mantenibilidad | Revisión de pertinencia con la dupla; pruebas de implementación no exigibles como software ya construido en este parcial |
 | Casos de uso | Diagrama .drawio/.png coherente; CU-05 detallado y alternos con retorno/postcondiciones | Revisión académica final de notación y reglas de negocio |
-| Prototipo y video | Figma Design con 31 pantallas y guía; 20 escenarios de lógica comprobados, recorridos V-01 a V-05 | Probar Presentar/acceso externo y grabar/entregar video de 6–8 minutos con principal + alterno y trazabilidad visible |
+| Prototipo y video | Figma Design con 31 pantallas y guía; 20 escenarios de lógica comprobados, recorridos V-01 a V-05 | Probar Presentar/acceso externo y Verificar duración, acceso y contenido del [video aportado](https://youtu.be/G40-IZL50ZY): 6–8 minutos, principal + alterno y trazabilidad visible |
 
 ## 2. Lista final
 
@@ -29,7 +29,8 @@ Este documento es una comprobación de evidencias, no una autoasignación de 25 
 - [x] Figma Design creado con 31 pantallas, conexiones nativas y revisión visual.
 - [x] Veinte escenarios de lógica comprobados sobre reacciones guardadas; sin destinos rotos.
 - [ ] Figma accesible para el evaluador y prueba manual en Presentar de V-01 a V-04.
-- [ ] Video grabado, duración comprobada y acceso probado.
+- [x] Enlace de video aportado en el documento del autor: https://youtu.be/G40-IZL50ZY.
+- [ ] Duración de 6–8 minutos, acceso externo y cadena alcance → requisitos → casos → prototipo comprobados en el video.
 - [x] Campos, nomenclatura RF/RNF/CU y estructura cotejados con el formato vigente del repositorio; registro en [especificación](especificacion-requisitos.md).
 
 ## 3. Orden para cerrar los pendientes
@@ -50,3 +51,16 @@ Este documento es una comprobación de evidencias, no una autoasignación de 25 
 - [ ] Incluir la adenda 2.1 en la revisión de la dupla y en el video.
 
 El diagrama conserva actores y doce casos: las restricciones se precisan en CU-11 y en la matriz, sin agregar asociaciones ficticias.
+
+
+## Revisión del documento consolidado con la rúbrica
+
+La rúbrica adjunta describe cinco criterios de 5 puntos. El [Word revisado](entrega/Evaluacion_parcial_KandoFlow_revisada.docx) conserva las secciones 4 (RF), 5 (RNF) y 6 (CU), los códigos y los enlaces del documento del autor.
+
+- RF: se restituyen los criterios completos de la especificación y se explicitan estado, relaciones y origen sin confirmación de la asesora real.
+- RNF: cada ficha incorpora justificación del límite, método, estado y relaciones.
+- CU: se integra el PNG vigente, se amplían retorno y postcondiciones de alternos y se añade la matriz de permisos y CU-11.
+- Elicitación: se distingue la bitácora simulada de la entrevista real pendiente y se prepara el contraste H/S.
+- Prototipo: se incorporan las 13 pruebas manuales previstas sin inventar resultados, fecha ni persona; se define qué verificar en el video ya enlazado.
+
+**Pendientes reales:** aplicación del guion neutral, respuestas de la asesora para la segunda entrevista solicitada, pruebas manuales y acceso externo, revisión de la dupla sobre la versión vigente y verificación del video. Preparar el documento no certifica 25 puntos. Las validaciones de negocio y las métricas de implementación mantienen sus estados propuestos.
