@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Funcionalidades | KandoFlow</title>
+  <meta name="description" content="Requisitos funcionales de KandoFlow, cotizador indicativo y simulación de entrega vehicular en cinco fases.">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="topbar"><div class="container">
+    <span>🚗 Estación de trabajo móvil para atención comercial Mazda</span>
+    <span class="clock" id="reloj" aria-live="off">Cargando fecha y hora…</span>
+  </div></div>
+  <header class="site-header"><div class="container nav">
+    <a class="logo" href="index.html"><img src="img/favicon.svg" alt="" width="34" height="34">KandoFlow</a>
+    <nav aria-label="Principal"><ul class="nav-list" id="nav-list"><li><a href="index.html">Inicio</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="funcionalidades.html" class="active" aria-current="page">Funcionalidades</a></li><li><a href="contacto.html">Contacto</a></li></ul></nav>
+    <div>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Cambiar tema claro u oscuro" title="Cambiar tema">🌙</button>
+      <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-list">☰</button>
+    </div>
+  </div></header>
+
+  <main id="contenido">
+    <section class="section">
+      <div class="container">
+        <div class="section-title"><h1>Funcionalidades</h1><p>Los 17 requisitos funcionales de la propuesta, organizados por área. Filtra o busca para encontrar uno.</p></div>
+        <div class="toolbar">
+          <div class="filters" role="group" aria-label="Filtrar por área"><button class="filter-btn active" type="button" data-filter="todos">Todas</button><button class="filter-btn" type="button" data-filter="comercial">Atención comercial</button><button class="filter-btn" type="button" data-filter="expediente">Expediente</button><button class="filter-btn" type="button" data-filter="entrega">Entrega</button><button class="filter-btn" type="button" data-filter="pruebas">Pruebas de manejo</button><button class="filter-btn" type="button" data-filter="admin">Administración</button></div>
+          <label for="buscador" style="position:absolute;left:-999px">Buscar funcionalidad</label>
+          <input class="search" id="buscador" type="search" placeholder="🔍 Buscar funcionalidad…" autocomplete="off">
+        </div>
+        <div class="grid cols-3" id="productos"><article class="card feature" data-cat="comercial" data-name="cotización indicativa calcula la cuota mensual con precio, enganche, plazo y tasa anual."><span class="rf">RF-01</span><h3>Cotización indicativa</h3><p>Calcula la cuota mensual con precio, enganche, plazo y tasa anual.</p><span class="tag">Atención comercial</span></article><article class="card feature" data-cat="comercial" data-name="propuesta por whatsapp abre una conversación con el texto de la cotización precargado."><span class="rf">RF-02</span><h3>Propuesta por WhatsApp</h3><p>Abre una conversación con el texto de la cotización precargado.</p><span class="tag">Atención comercial</span></article><article class="card feature" data-cat="comercial" data-name="registro de prospectos captura y consulta los datos de cada prospecto."><span class="rf">RF-10</span><h3>Registro de prospectos</h3><p>Captura y consulta los datos de cada prospecto.</p><span class="tag">Atención comercial</span></article><article class="card feature" data-cat="expediente" data-name="documentos del expediente incorpora archivos al expediente de forma local."><span class="rf">RF-03</span><h3>Documentos del expediente</h3><p>Incorpora archivos al expediente de forma local.</p><span class="tag">Expediente</span></article><article class="card feature" data-cat="expediente" data-name="auditoría de completitud verifica ine, domicilio y estados de cuenta antes de validar."><span class="rf">RF-04</span><h3>Auditoría de completitud</h3><p>Verifica INE, domicilio y estados de cuenta antes de validar.</p><span class="tag">Expediente</span></article><article class="card feature" data-cat="expediente" data-name="solicitud editable genera la solicitud a partir de una plantilla documental."><span class="rf">RF-05</span><h3>Solicitud editable</h3><p>Genera la solicitud a partir de una plantilla documental.</p><span class="tag">Expediente</span></article><article class="card feature" data-cat="expediente" data-name="exportar expediente consolida el expediente en docx o pdf."><span class="rf">RF-09</span><h3>Exportar expediente</h3><p>Consolida el expediente en DOCX o PDF.</p><span class="tag">Expediente</span></article><article class="card feature" data-cat="expediente" data-name="pdf protegido abre pdf con clave autorizada."><span class="rf">RF-13</span><h3>PDF protegido</h3><p>Abre PDF con clave autorizada.</p><span class="tag">Expediente</span></article><article class="card feature" data-cat="entrega" data-name="secuencia de entrega controla las cinco fases consecutivas del checklist."><span class="rf">RF-06</span><h3>Secuencia de entrega</h3><p>Controla las cinco fases consecutivas del checklist.</p><span class="tag">Entrega</span></article><article class="card feature" data-cat="entrega" data-name="gestión de incidencias pausa la entrega ante un daño o faltante hasta su resolución."><span class="rf">RF-07</span><h3>Gestión de incidencias</h3><p>Pausa la entrega ante un daño o faltante hasta su resolución.</p><span class="tag">Entrega</span></article><article class="card feature" data-cat="entrega" data-name="programar entrega agenda la entrega de cada vehículo."><span class="rf">RF-11</span><h3>Programar entrega</h3><p>Agenda la entrega de cada vehículo.</p><span class="tag">Entrega</span></article><article class="card feature" data-cat="entrega" data-name="pase de salida emite el pase con qr cuando todos los controles están completos."><span class="rf">RF-12</span><h3>Pase de salida</h3><p>Emite el pase con QR cuando todos los controles están completos.</p><span class="tag">Entrega</span></article><article class="card feature" data-cat="pruebas" data-name="prueba de manejo reserva vehículos demo con licencia vigente y 20 min entre reservas."><span class="rf">RF-16</span><h3>Prueba de manejo</h3><p>Reserva vehículos demo con licencia vigente y 20 min entre reservas.</p><span class="tag">Pruebas de manejo</span></article><article class="card feature" data-cat="admin" data-name="respaldo en drive respalda el paquete en una cuenta corporativa autorizada."><span class="rf">RF-08</span><h3>Respaldo en Drive</h3><p>Respalda el paquete en una cuenta corporativa autorizada.</p><span class="tag">Administración</span></article><article class="card feature" data-cat="admin" data-name="bitácora en sheets sincroniza la bitácora de operaciones."><span class="rf">RF-17</span><h3>Bitácora en Sheets</h3><p>Sincroniza la bitácora de operaciones.</p><span class="tag">Administración</span></article><article class="card feature" data-cat="admin" data-name="plantillas documentales administra las plantillas de la solicitud."><span class="rf">RF-14</span><h3>Plantillas documentales</h3><p>Administra las plantillas de la solicitud.</p><span class="tag">Administración</span></article><article class="card feature" data-cat="admin" data-name="acceso por rol restringe cada operación al rol de la sesión autenticada."><span class="rf">RF-15</span><h3>Acceso por rol</h3><p>Restringe cada operación al rol de la sesión autenticada.</p><span class="tag">Administración</span></article></div>
+        <p class="no-results" id="sin-resultados">No encontramos funcionalidades con esa búsqueda.</p>
+      </div>
+    </section>
+
+    <section class="section alt" id="cotizador">
+      <div class="container">
+        <div class="section-title"><h2>Cotizador indicativo (RF-01 y RF-02)</h2><p>Implementa la convención financiera de prueba de la especificación. Es un cálculo ilustrativo, no una oferta comercial.</p></div>
+        <div class="calc-layout">
+          <div class="card">
+            <form id="form-cotizador" novalidate>
+              <div class="form-group"><label for="precio">Precio del vehículo (MXN)</label><input type="number" id="precio" value="450000" min="1" step="any" inputmode="decimal"><span class="error-msg" id="err-precio" aria-live="polite"></span></div>
+              <div class="form-group"><label for="enganche">Enganche (%) — de 10 a 80</label><input type="number" id="enganche" value="25" step="any" inputmode="decimal"><span class="error-msg" id="err-enganche" aria-live="polite"></span></div>
+              <div class="form-group"><label for="plazo">Plazo (meses)</label><select id="plazo"><option>12</option><option>24</option><option>36</option><option selected>48</option><option>60</option><option>72</option></select></div>
+              <div class="form-group"><label for="tasa">Tasa anual nominal (%)</label><input type="number" id="tasa" value="12" step="any" inputmode="decimal"><span class="error-msg" id="err-tasa" aria-live="polite"></span></div>
+              <div class="form-group"><label for="modelo">Modelo (opcional)</label><input type="text" id="modelo" placeholder="Ej. Mazda3 Sedán" maxlength="40"></div>
+              <button class="btn" type="submit">Calcular cuota</button>
+            </form>
+          </div>
+          <div id="resultado-wrap">
+            <div class="calc-result"><small>Cuota mensual indicativa</small><span class="big" id="cuota">—</span></div>
+            <ul class="calc-detail" id="detalle-cotizacion"><li><span>Capital financiado</span><span id="capital">—</span></li><li><span>Enganche</span><span id="monto-enganche">—</span></li><li><span>Total a pagar en cuotas</span><span id="total-cuotas">—</span></li></ul>
+            <div class="card">
+              <div class="form-group" style="margin-bottom:10px"><label for="telefono">Teléfono del cliente (10 dígitos)</label><input type="tel" id="telefono" placeholder="5512345678" inputmode="numeric" maxlength="10"><span class="error-msg" id="err-telefono" aria-live="polite"></span></div>
+              <button class="btn" type="button" id="btn-whatsapp">Preparar propuesta en WhatsApp</button>
+              <p style="font-size:.85rem;color:var(--muted);margin:10px 0 0">Se abre WhatsApp con el texto precargado; el envío lo confirmas tú.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="entrega">
+      <div class="container" style="max-width:760px">
+        <div class="section-title"><h2>Simulación de entrega en cinco fases (RF-06)</h2><p>Una fase posterior permanece bloqueada mientras falte la anterior. Al terminar la quinta se habilita el pase de salida. Las fases son una simulación del modelo de trabajo del proyecto.</p></div>
+        <div class="progress" aria-hidden="true"><div id="progreso"></div></div>
+        <ol class="stepper" id="stepper"><li class="step current" data-phase="1"><span class="n">1</span><div class="info"><strong>Fase 1: Preparación</strong><span>Verifica documentos y unidad antes de la entrega.</span></div><button class="btn complete-btn" type="button">Completar</button></li><li class="step locked" data-phase="2"><span class="n">2</span><div class="info"><strong>Fase 2: Firma</strong><span>Recaba las firmas requeridas.</span></div><button class="btn complete-btn" type="button" disabled>Completar</button></li><li class="step locked" data-phase="3"><span class="n">3</span><div class="info"><strong>Fase 3: Inspección</strong><span>Revisa el vehículo; una incidencia pausa el proceso.</span></div><button class="btn complete-btn" type="button" disabled>Completar</button></li><li class="step locked" data-phase="4"><span class="n">4</span><div class="info"><strong>Fase 4: Orientación</strong><span>Explica el uso del vehículo al cliente.</span></div><button class="btn complete-btn" type="button" disabled>Completar</button></li><li class="step locked" data-phase="5"><span class="n">5</span><div class="info"><strong>Fase 5: Recepción</strong><span>El cliente confirma la recepción.</span></div><button class="btn complete-btn" type="button" disabled>Completar</button></li></ol>
+        <div class="pase" id="pase" role="status">✅ Entrega completada. Pase de salida habilitado.</div>
+        <p style="text-align:center"><button class="btn outline" type="button" id="reiniciar-entrega" style="color:var(--text)">Reiniciar simulación</button></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="grid cols-3">
+        <div><h3>KandoFlow</h3><p>Propuesta de aplicación web (PWA) para cotizar, integrar expedientes de crédito y controlar la entrega de vehículos.</p></div>
+        <div><h3>Navegación</h3><ul><li><a href="index.html">Inicio</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="funcionalidades.html">Funcionalidades</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+        <div><h3>Proyecto</h3><ul><li><a href="https://github.com/james-gosling/kando-flow" target="_blank" rel="noopener">Repositorio en GitHub</a></li><li><a href="https://factor-yam-65024850.figma.site" target="_blank" rel="noopener">Prototipo publicado</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">© <span id="anio">2026</span> KandoFlow — Rodrigo Valdespino Vértiz · Ingeniería de Software I. Hecho con HTML5, CSS3, JavaScript y jQuery.</div>
+    </div>
+  </footer>
+  <button id="btn-top" type="button" aria-label="Ir arriba" title="Ir arriba">↑</button>
+
+  <script src="vendor/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/jquery-app.js"></script>
+</body>
+</html>
