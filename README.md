@@ -12,6 +12,8 @@ KandoFlow propone una estación de trabajo móvil para apoyar la atención comer
 
 **[Ver video de presentación y demo funcional](https://youtu.be/G40-IZL50ZY)** — duración aproximada de 20 minutos; explica el repositorio y recorre la demo, según lo informado por el autor.
 
+**[Sitio web de KandoFlow](sitio-web/README.md)** — sitio responsivo (HTML5, CSS3, JavaScript, jQuery, bxSlider, Magnific Popup y Leaflet) que presenta la propuesta; vive en la carpeta [`sitio-web/`](sitio-web).
+
 ## Entregables y orden de lectura
 
 | Entregable | Enlace |
