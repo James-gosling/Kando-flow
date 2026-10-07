@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto | KandoFlow</title>
+  <meta name="description" content="Contacta al equipo de KandoFlow: formulario validado, enlaces del proyecto y mapa de ubicación.">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="stylesheet" href="vendor/leaflet.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="topbar"><div class="container">
+    <span>🚗 Estación de trabajo móvil para atención comercial Mazda</span>
+    <span class="clock" id="reloj" aria-live="off">Cargando fecha y hora…</span>
+  </div></div>
+  <header class="site-header"><div class="container nav">
+    <a class="logo" href="index.html"><img src="img/favicon.svg" alt="" width="34" height="34">KandoFlow</a>
+    <nav aria-label="Principal"><ul class="nav-list" id="nav-list"><li><a href="index.html">Inicio</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="funcionalidades.html">Funcionalidades</a></li><li><a href="contacto.html" class="active" aria-current="page">Contacto</a></li></ul></nav>
+    <div>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Cambiar tema claro u oscuro" title="Cambiar tema">🌙</button>
+      <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-list">☰</button>
+    </div>
+  </div></header>
+
+  <main id="contenido">
+    <section class="section">
+      <div class="container">
+        <div class="section-title"><h1>Contacto</h1><p>Envía tus comentarios sobre la propuesta de KandoFlow. El envío es una simulación: el mensaje solo se valida en tu navegador.</p></div>
+        <div class="contact-layout">
+          <div class="card">
+            <h2 style="font-size:1.5rem">Envíanos un mensaje</h2>
+            <form id="form-contacto" novalidate>
+              <div class="form-group"><label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" autocomplete="name" required minlength="3" maxlength="60">
+                <span class="error-msg" id="err-nombre" aria-live="polite"></span></div>
+              <div class="form-group"><label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" autocomplete="email" required>
+                <span class="error-msg" id="err-correo" aria-live="polite"></span></div>
+              <div class="form-group"><label for="asunto">Asunto</label>
+                <input type="text" id="asunto" name="asunto" required minlength="5" maxlength="80">
+                <span class="error-msg" id="err-asunto" aria-live="polite"></span></div>
+              <div class="form-group"><label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required minlength="10" maxlength="500"></textarea>
+                <div class="counter"><span id="contador">0</span>/500</div>
+                <span class="error-msg" id="err-mensaje" aria-live="polite"></span></div>
+              <button class="btn" type="submit">Enviar mensaje</button>
+              <p class="form-status" id="form-ok" role="status"></p>
+            </form>
+          </div>
+          <div class="card">
+            <h2 style="font-size:1.5rem">Datos del proyecto</h2>
+            <ul class="info-list">
+              <li>👤 Rodrigo Valdespino Vértiz (autor)</li>
+              <li>👥 Emiliano Cabañas Prieto (dupla)</li>
+              <li>💻 <a href="https://github.com/james-gosling/kando-flow" target="_blank" rel="noopener">Repositorio en GitHub</a></li>
+              <li>🎨 <a href="https://factor-yam-65024850.figma.site" target="_blank" rel="noopener">Prototipo web publicado</a></li>
+              <li>📍 Mazda Zapata Querétaro — Blvd. Bernardo Quintana 588, Col. San Pedrito Peñuelas, 76148 Querétaro, Qro.</li>
+            </ul>
+            <div id="mapa" role="region" aria-label="Mapa interactivo con la ubicación de Mazda Zapata Querétaro"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="grid cols-3">
+        <div><h3>KandoFlow</h3><p>Propuesta de aplicación web (PWA) para cotizar, integrar expedientes de crédito y controlar la entrega de vehículos.</p></div>
+        <div><h3>Navegación</h3><ul><li><a href="index.html">Inicio</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="funcionalidades.html">Funcionalidades</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+        <div><h3>Proyecto</h3><ul><li><a href="https://github.com/james-gosling/kando-flow" target="_blank" rel="noopener">Repositorio en GitHub</a></li><li><a href="https://factor-yam-65024850.figma.site" target="_blank" rel="noopener">Prototipo publicado</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">© <span id="anio">2026</span> KandoFlow — Rodrigo Valdespino Vértiz · Ingeniería de Software I. Hecho con HTML5, CSS3, JavaScript y jQuery.</div>
+    </div>
+  </footer>
+  <button id="btn-top" type="button" aria-label="Ir arriba" title="Ir arriba">↑</button>
+
+  <script src="vendor/jquery.min.js"></script>
+  <script src="vendor/leaflet.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/jquery-app.js"></script>
+</body>
+</html>

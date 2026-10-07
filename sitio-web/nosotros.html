@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nosotros | KandoFlow</title>
+  <meta name="description" content="Autor, roles, línea del tiempo y preguntas frecuentes del proyecto KandoFlow.">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="stylesheet" href="vendor/magnific-popup.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="topbar"><div class="container">
+    <span>🚗 Estación de trabajo móvil para atención comercial Mazda</span>
+    <span class="clock" id="reloj" aria-live="off">Cargando fecha y hora…</span>
+  </div></div>
+  <header class="site-header"><div class="container nav">
+    <a class="logo" href="index.html"><img src="img/favicon.svg" alt="" width="34" height="34">KandoFlow</a>
+    <nav aria-label="Principal"><ul class="nav-list" id="nav-list"><li><a href="index.html">Inicio</a></li><li><a href="nosotros.html" class="active" aria-current="page">Nosotros</a></li><li><a href="funcionalidades.html">Funcionalidades</a></li><li><a href="contacto.html">Contacto</a></li></ul></nav>
+    <div>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Cambiar tema claro u oscuro" title="Cambiar tema">🌙</button>
+      <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-list">☰</button>
+    </div>
+  </div></header>
+
+  <main id="contenido">
+    <section class="section">
+      <div class="container two-col">
+        <div>
+          <h1>Sobre el proyecto</h1>
+          <p>KandoFlow nace en la materia <strong>Ingeniería de Software I</strong> como propuesta para apoyar a una asesora comercial Mazda. Busca reducir el tiempo de cotización, ordenar los documentos de crédito y evitar omisiones durante la entrega de vehículos.</p>
+          <p><strong>Autor:</strong> Rodrigo Valdespino Vértiz<br><strong>Dupla:</strong> Emiliano Cabañas Prieto</p>
+          <p><strong>Usuaria objetivo:</strong> Erika Vértiz, asesora de ventas.</p>
+          <p><a class="btn" href="https://github.com/james-gosling/kando-flow" target="_blank" rel="noopener">Ver repositorio</a></p>
+        </div>
+        <img class="rounded" src="img/galeria-2.svg" alt="Concepto de pantalla del cotizador de KandoFlow" width="1200" height="600">
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-title"><h2>Roles del sistema</h2></div>
+        <div class="table-wrap"><table class="tabla">
+          <thead><tr><th>Rol</th><th>Objetivo</th><th>Acceso</th></tr></thead>
+          <tbody>
+            <tr><td>Asesora de ventas</td><td>Cotizar, integrar expedientes y conducir entregas</td><td>Casos de uso comerciales, de expediente y de entrega</td></tr>
+            <tr><td>Administrador</td><td>Mantener plantillas y supervisar sincronización</td><td>Configuración técnica únicamente</td></tr>
+            <tr><td>Cliente / prospecto</td><td>Recibir cotización y una entrega documentada</td><td>Vista temporal iniciada por la asesora</td></tr>
+          </tbody></table></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container two-col">
+        <div>
+          <h2>Línea del tiempo</h2>
+          <ul class="timeline">
+            <li><strong>29 sep 2026</strong> — Visión del producto v2.0 y especificación de requisitos.</li>
+            <li><strong>30 sep 2026</strong> — Prototipo web publicado en Figma Make con 31 pantallas.</li>
+            <li><strong>30 sep 2026</strong> — Adenda 2.1: acceso por rol, login y panel de administrador.</li>
+            <li><strong>Siguiente etapa</strong> — Validar reglas financieras, persistencia, control de acceso y sincronización.</li>
+          </ul>
+        </div>
+        <div><h2>Preguntas frecuentes</h2><div id="faq"><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">¿KandoFlow es una aplicación terminada?</button><div class="faq-a">No. Es un paquete de análisis con prototipo editable en Figma (31 pantallas). La aplicación aún no está implementada; este sitio presenta la propuesta.</div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">¿Funcionará sin conexión?</button><div class="faq-a">Se propone una PWA con datos locales (IndexedDB): cotización, datos descargados y checklist funcionarían sin red tras la primera preparación. La sincronización sí requiere conexión.</div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">¿Quién usaría el sistema?</button><div class="faq-a">La asesora de ventas como operadora principal y un administrador para plantillas y sincronización. El cliente solo confirma recepción o acuerdos en el dispositivo de la asesora.</div></div><div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">¿Se envían mensajes automáticamente por WhatsApp?</button><div class="faq-a">No. La aplicación abre una conversación con el texto precargado y el envío lo confirma la persona.</div></div></div></div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-title"><h2>Galería de conceptos</h2><p>Ilustraciones del concepto de las pantallas. Haz clic para ampliar y usa las flechas para navegar.</p></div>
+        <div class="gallery" id="galeria"><a href="img/galeria-1.svg" title="Inicio de sesión"><img src="img/galeria-1.svg" alt="Concepto de pantalla: Inicio de sesión" loading="lazy" width="1200" height="600"></a><a href="img/galeria-2.svg" title="Cotizador"><img src="img/galeria-2.svg" alt="Concepto de pantalla: Cotizador" loading="lazy" width="1200" height="600"></a><a href="img/galeria-3.svg" title="Expediente"><img src="img/galeria-3.svg" alt="Concepto de pantalla: Expediente" loading="lazy" width="1200" height="600"></a><a href="img/galeria-4.svg" title="Checklist de entrega"><img src="img/galeria-4.svg" alt="Concepto de pantalla: Checklist de entrega" loading="lazy" width="1200" height="600"></a><a href="img/galeria-5.svg" title="Incidencia"><img src="img/galeria-5.svg" alt="Concepto de pantalla: Incidencia" loading="lazy" width="1200" height="600"></a><a href="img/galeria-6.svg" title="Pase con QR"><img src="img/galeria-6.svg" alt="Concepto de pantalla: Pase con QR" loading="lazy" width="1200" height="600"></a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="grid cols-3">
+        <div><h3>KandoFlow</h3><p>Propuesta de aplicación web (PWA) para cotizar, integrar expedientes de crédito y controlar la entrega de vehículos.</p></div>
+        <div><h3>Navegación</h3><ul><li><a href="index.html">Inicio</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="funcionalidades.html">Funcionalidades</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+        <div><h3>Proyecto</h3><ul><li><a href="https://github.com/james-gosling/kando-flow" target="_blank" rel="noopener">Repositorio en GitHub</a></li><li><a href="https://factor-yam-65024850.figma.site" target="_blank" rel="noopener">Prototipo publicado</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">© <span id="anio">2026</span> KandoFlow — Rodrigo Valdespino Vértiz · Ingeniería de Software I. Hecho con HTML5, CSS3, JavaScript y jQuery.</div>
+    </div>
+  </footer>
+  <button id="btn-top" type="button" aria-label="Ir arriba" title="Ir arriba">↑</button>
+
+  <script src="vendor/jquery.min.js"></script>
+  <script src="vendor/jquery.magnific-popup.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/jquery-app.js"></script>
+</body>
+</html>

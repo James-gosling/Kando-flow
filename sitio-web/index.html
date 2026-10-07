@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inicio | KandoFlow</title>
+  <meta name="description" content="KandoFlow: propuesta de estación de trabajo móvil para cotizaciones, expedientes de crédito y entrega de vehículos Mazda.">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="stylesheet" href="vendor/jquery.bxslider.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="topbar"><div class="container">
+    <span>🚗 Estación de trabajo móvil para atención comercial Mazda</span>
+    <span class="clock" id="reloj" aria-live="off">Cargando fecha y hora…</span>
+  </div></div>
+  <header class="site-header"><div class="container nav">
+    <a class="logo" href="index.html"><img src="img/favicon.svg" alt="" width="34" height="34">KandoFlow</a>
+    <nav aria-label="Principal"><ul class="nav-list" id="nav-list"><li><a href="index.html" class="active" aria-current="page">Inicio</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="funcionalidades.html">Funcionalidades</a></li><li><a href="contacto.html">Contacto</a></li></ul></nav>
+    <div>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Cambiar tema claro u oscuro" title="Cambiar tema">🌙</button>
+      <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-list">☰</button>
+    </div>
+  </div></header>
+
+  <main id="contenido">
+    <section class="hero" aria-label="Destacados"><div class="slider-hero">
+      <div class="hero-slide"><img src="img/slide-1.svg" alt="Ilustración de pantallas móviles de KandoFlow (1 de 3)" width="1200" height="600">
+        <div class="hero-caption"><h1>Cotiza en segundos, desde el piso de ventas</h1><p>Calcula una cuota mensual indicativa y prepara la propuesta para WhatsApp con un toque.</p><a class="btn" href="funcionalidades.html#cotizador">Probar el cotizador</a></div></div>
+      <div class="hero-slide"><img src="img/slide-2.svg" alt="Ilustración de pantallas móviles de KandoFlow (2 de 3)" width="1200" height="600">
+        <div class="hero-caption"><h2>Expedientes de crédito completos, sin papeles perdidos</h2><p>Audita la documentación, detecta faltantes y exporta el expediente consolidado.</p><a class="btn" href="funcionalidades.html">Ver funcionalidades</a></div></div>
+      <div class="hero-slide"><img src="img/slide-3.svg" alt="Ilustración de pantallas móviles de KandoFlow (3 de 3)" width="1200" height="600">
+        <div class="hero-caption"><h2>Entregas de vehículo en cinco fases</h2><p>Un checklist consecutivo con incidencias y pase de salida: sin atajos ni omisiones.</p><a class="btn" href="funcionalidades.html#entrega">Ver la simulación</a></div></div>
+    </div></section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title"><h2>¿Qué es KandoFlow?</h2><p>Una propuesta de aplicación web adaptable a móviles, con operación local sin conexión, que apoya a la asesora comercial en cotizaciones, expedientes de crédito y entregas de vehículos.</p></div>
+        <div class="grid cols-3"><article class="card reveal"><span class="emoji" aria-hidden="true">💬</span><h3>Atención comercial</h3><p>Registro de prospectos, cotización indicativa y propuesta lista para enviar por WhatsApp.</p></article><article class="card reveal"><span class="emoji" aria-hidden="true">📁</span><h3>Expediente de crédito</h3><p>Incorporación local de documentos, auditoría de completitud y exportación a DOCX/PDF.</p></article><article class="card reveal"><span class="emoji" aria-hidden="true">✅</span><h3>Entrega vehicular</h3><p>Checklist de cinco fases, gestión de incidencias y pase de salida con código QR.</p></article></div>
+      </div>
+    </section>
+
+    <section class="section stats" aria-label="Cifras del proyecto">
+      <div class="container"><div class="grid">
+        <div><span class="num" data-count="17">0</span>requisitos funcionales</div>
+        <div><span class="num" data-count="31">0</span>pantallas del prototipo</div>
+        <div><span class="num" data-count="84">0</span>nodos con interacción</div>
+        <div><span class="num" data-count="5">0</span>fases de entrega</div>
+      </div></div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-title"><h2>Los problemas que busca resolver</h2></div>
+        <div class="testimonials"><ul class="slider-problemas" style="list-style:none;padding:0;margin:0">
+          <li><blockquote>Cotizaciones lentas: calcular y enviar una propuesta consume tiempo frente al cliente.<cite>Atención comercial</cite></blockquote></li>
+          <li><blockquote>Documentos de crédito dispersos: la información del expediente se pierde entre chats, fotos y carpetas.<cite>Expediente</cite></blockquote></li>
+          <li><blockquote>Omisiones durante la entrega: sin una secuencia obligatoria se saltan inspecciones y controles.<cite>Entrega vehicular</cite></blockquote></li>
+        </ul></div>
+        <p class="note" style="max-width:760px;margin:20px auto 0">Estos hallazgos provienen de la entrevista académica registrada en la documentación del proyecto; no son mediciones de campo.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="text-align:center">
+        <h2>Explora la propuesta</h2>
+        <p>Prueba el cotizador indicativo o recorre la simulación de entrega en cinco fases.</p>
+        <a class="btn" href="funcionalidades.html">Ir a funcionalidades</a>
+        <a class="btn outline" href="https://factor-yam-65024850.figma.site" target="_blank" rel="noopener" style="margin-left:8px">Abrir prototipo Figma</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="grid cols-3">
+        <div><h3>KandoFlow</h3><p>Propuesta de aplicación web (PWA) para cotizar, integrar expedientes de crédito y controlar la entrega de vehículos.</p></div>
+        <div><h3>Navegación</h3><ul><li><a href="index.html">Inicio</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="funcionalidades.html">Funcionalidades</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+        <div><h3>Proyecto</h3><ul><li><a href="https://github.com/james-gosling/kando-flow" target="_blank" rel="noopener">Repositorio en GitHub</a></li><li><a href="https://factor-yam-65024850.figma.site" target="_blank" rel="noopener">Prototipo publicado</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">© <span id="anio">2026</span> KandoFlow — Rodrigo Valdespino Vértiz · Ingeniería de Software I. Hecho con HTML5, CSS3, JavaScript y jQuery.</div>
+    </div>
+  </footer>
+  <button id="btn-top" type="button" aria-label="Ir arriba" title="Ir arriba">↑</button>
+
+  <script src="vendor/jquery.min.js"></script>
+  <script src="vendor/jquery.bxslider.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/jquery-app.js"></script>
+</body>
+</html>
