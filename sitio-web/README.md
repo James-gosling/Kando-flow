@@ -18,7 +18,7 @@ Sitio web responsivo que presenta **KandoFlow**, la propuesta de estación de tr
 - **Funcionalidad adicional:** cotizador indicativo (fórmula de RF-01, oráculo 8,887.67 MXN), propuesta por WhatsApp (RF-02) y simulación de entrega por fases (RF-06).
 - **jQuery (`js/jquery-app.js`):** eventos, efectos (`fade`, `slideToggle`, `animate`) y manipulación del DOM.
 - **Plugins:** [bxSlider](https://bxslider.com/) y [Magnific Popup](https://dimsemenov.com/plugins/magnific-popup/).
-- **Mapa:** [Leaflet](https://leafletjs.com/) + OpenStreetMap (requiere conexión). La ubicación es **de ejemplo**: cambia las coordenadas en `js/main.js`.
+- **Mapa:** [Leaflet](https://leafletjs.com/) + OpenStreetMap (requiere conexión). Marca Mazda Zapata Querétaro (Blvd. Bernardo Quintana 588); las coordenadas son aproximadas y se editan en `js/main.js`.
 - **Formulario:** nombre, correo, asunto y mensaje validados con JavaScript.
 
 ## Estructura

@@ -126,15 +126,15 @@
     if (typeof L === "undefined") {
       contenedorMapa.textContent = "No se pudo cargar el mapa.";
     } else {
-      // Ubicación de EJEMPLO de la agencia (Ángel de la Independencia, CDMX). Cambia estas coordenadas por las reales.
-      var posicion = [19.4270, -99.1677];
+      // Mazda Zapata Querétaro, Blvd. Bernardo Quintana 588 (coordenadas aproximadas de directorios en línea).
+      var posicion = [20.6178, -100.4031];
       var mapa = L.map("mapa").setView(posicion, 16);
       L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
         attribution: "&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a>"
       }).addTo(mapa);
       L.marker(posicion).addTo(mapa)
-        .bindPopup("<strong>Agencia Mazda (ubicación de ejemplo)</strong><br>Paseo de la Reforma, CDMX").openPopup();
+        .bindPopup("<strong>Mazda Zapata Querétaro</strong><br>Blvd. Bernardo Quintana 588, San Pedrito Peñuelas").openPopup();
     }
   }
 })();
