@@ -30,7 +30,7 @@ sitio-web/
 ├── js/jquery-app.js    # jQuery + plugins
 ├── img/                # ilustraciones SVG propias (conceptos de pantalla)
 ├── vendor/             # jQuery, bxSlider, Magnific Popup (locales)
-└── docs/               # informe PDF y capturas
+└── docs/               # documento institucional (PDF/HTML) y capturas
 ```
 
 ## Ejecutar

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><title>Sitio web interactivo KandoFlow — Documento institucional</title>
+<style>
+@page{size:Letter;margin:25mm 25mm 25mm 25mm}
+body{font-family:Arial,Helvetica,sans-serif;font-size:11.5pt;line-height:1.55;color:#111;text-align:justify}
+h1,h2,h3{text-align:left;color:#6b0000;font-family:Arial,Helvetica,sans-serif}
+h1{font-size:17pt;border-bottom:2px solid #f28c00;padding-bottom:4pt;margin-top:0;break-after:avoid}
+h2{font-size:13.5pt;margin:16pt 0 6pt;break-after:avoid}
+p{margin:0 0 8pt}
+.portada{text-align:center;break-after:page;padding-top:6mm}
+.portada img.logo{width:92mm;margin:0 auto 14mm;display:block}
+.portada .t{font-size:24pt;font-weight:bold;color:#6b0000;margin:10mm 0 3mm;line-height:1.2}
+.portada .s{font-size:14pt;margin-bottom:16mm}
+.portada table{margin:0 auto;border:0;text-align:left;font-size:12pt}
+.portada td{border:0;padding:3pt 10pt}
+.portada td:first-child{font-weight:bold;color:#6b0000;text-align:right}
+.pb{break-before:page}
+figure{margin:10pt 0;break-inside:avoid;text-align:center}
+figure img{max-width:88%;border:1px solid #bbb}
+figure.m img{max-width:24%}
+figure.f img{max-width:66%}
+figcaption{font-size:9.5pt;color:#444;margin-top:3pt;text-align:center}
+table.t{border-collapse:collapse;width:100%;font-size:10.5pt;margin:6pt 0 10pt;break-inside:avoid}
+table.t th{background:#6b0000;color:#fff;padding:5pt 7pt;text-align:left}
+table.t td{border:1px solid #bbb;padding:5pt 7pt;vertical-align:top;text-align:left}
+pre{background:#f4f1ee;border-left:4px solid #f28c00;padding:8pt 10pt;font-size:9pt;line-height:1.4;white-space:pre-wrap;text-align:left;break-inside:avoid;margin:6pt 0 10pt}
+code{font-family:Consolas,monospace;font-size:10pt}
+ul,ol{margin:0 0 8pt;padding-left:20pt}
+li{margin-bottom:3pt}
+.ref{padding-left:28pt;text-indent:-28pt;text-align:left;margin-bottom:7pt}
+a{color:#6b0000;word-break:break-all}
+.note{background:#fdf1e0;border-left:4px solid #f28c00;padding:6pt 10pt;margin:8pt 0;font-size:10.5pt}
+</style></head><body>
+
+<section class="portada">
+  <img class="logo" src="logo-anahuac.webp" alt="Universidad Anáhuac Querétaro">
+  <div class="t">Sitio web interactivo con jQuery y plugins</div>
+  <div class="s">Proyecto KandoFlow · Actividad 9</div>
+  <table>
+    <tr><td>Alumno:</td><td>Rodrigo Valdespino Vértiz</td></tr>
+    <tr><td>Materia:</td><td>Programación para Internet</td></tr>
+    <tr><td>Profesora:</td><td>Karla Vianney Ramos García</td></tr>
+    <tr><td>Fecha:</td><td>11 de octubre de 2026</td></tr>
+    <tr><td>Repositorio:</td><td><a href="https://github.com/James-gosling/Kando-flow/tree/main/sitio-web">github.com/James-gosling/Kando-flow</a> (carpeta <code>sitio-web</code>)</td></tr>
+    <tr><td>Video:</td><td><a href="https://youtu.be/n128mnoHusg">youtu.be/n128mnoHusg</a></td></tr>
+  </table>
+</section>
+
+<h1>1. Introducción</h1>
+<p>Este documento presenta el sitio web interactivo desarrollado para la Actividad 9 de la materia Programación para Internet. El sitio integra HTML5, CSS3, JavaScript, jQuery y dos plugins de jQuery, y se publicó con control de versiones en GitHub.</p>
+<p>El tema del sitio es <strong>KandoFlow</strong>, una propuesta de aplicación web adaptable a móviles para apoyar a una asesora comercial de la marca Mazda en tres tareas: cotizar un vehículo, integrar el expediente de crédito del cliente y conducir la entrega del vehículo. KandoFlow surgió en la materia Ingeniería de Software I, donde se documentó su visión, sus requisitos y un prototipo en Figma. Para esta actividad se tomó esa propuesta como el «negocio» del sitio, de modo que el contenido es coherente y verificable con la documentación existente en el mismo repositorio.</p>
+<p>Es importante precisar que KandoFlow, como aplicación, todavía no está implementada. El sitio web presenta la propuesta y ofrece dos demostraciones funcionales: un cotizador indicativo y una simulación de entrega en cinco fases.</p>
+
+<h1>2. Objetivo</h1>
+<p><strong>Objetivo general.</strong> Desarrollar un sitio web completo, responsivo e interactivo que integre HTML5, CSS3, JavaScript, jQuery y al menos un plugin de jQuery, utilizando GitHub para su desarrollo.</p>
+<p><strong>Objetivos específicos.</strong></p>
+<ul>
+<li>Estructurar cuatro páginas (Inicio, Nosotros, Funcionalidades y Contacto) con navegación, pie de página e identidad visual consistente.</li>
+<li>Implementar con JavaScript la fecha y hora actual, la validación del formulario, el botón «Ir arriba» y una funcionalidad adicional.</li>
+<li>Aplicar jQuery en eventos, efectos y manipulación del DOM.</li>
+<li>Integrar los plugins bxSlider y Magnific Popup, y un mapa interactivo con la ubicación de la agencia.</li>
+</ul>
+
+<h1>3. Descripción del sitio</h1>
+<table class="t">
+<tr><th style="width:24%">Página</th><th style="width:22%">Archivo</th><th>Contenido</th></tr>
+<tr><td>Inicio</td><td><code>index.html</code></td><td>Carrusel principal, presentación de KandoFlow, cifras animadas y problemas que busca resolver.</td></tr>
+<tr><td>Nosotros</td><td><code>nosotros.html</code></td><td>Sobre el proyecto, roles del sistema, línea del tiempo, preguntas frecuentes y galería de conceptos de pantalla.</td></tr>
+<tr><td>Funcionalidades</td><td><code>funcionalidades.html</code></td><td>Los 17 requisitos funcionales con filtro y buscador, cotizador indicativo y simulación de entrega.</td></tr>
+<tr><td>Contacto</td><td><code>contacto.html</code></td><td>Formulario validado, datos del proyecto y mapa con la ubicación de Mazda Zapata Querétaro.</td></tr>
+</table>
+<p><strong>Identidad visual.</strong> Se usó una paleta de grafito y rojo (alusiva a la marca del sector automotriz), tipografía de sistema sin serifas, tarjetas con bordes redondeados y un tema claro y otro oscuro. Todas las páginas comparten la misma hoja de estilos (<code>css/styles.css</code>), el mismo encabezado con menú y el mismo pie de página. Las ilustraciones son archivos SVG creados para el proyecto, por lo que no hay imágenes de terceros.</p>
+<figure><img src="capturas/inicio.png" alt=""><figcaption>Figura 1. Página de inicio con carrusel bxSlider, menú de navegación y fecha y hora actual.</figcaption></figure>
+<p><strong>Diseño responsivo.</strong> El diseño se adapta a pantallas pequeñas con CSS Grid, Flexbox y consultas de medios. En el ancho de un teléfono el menú se convierte en un botón desplegable y las columnas pasan a una sola. Se verificó que ninguna de las cuatro páginas genere desplazamiento horizontal a 390 px de ancho.</p>
+<figure class="m"><img src="capturas/movil.png" alt=""><figcaption>Figura 2. Vista móvil con menú desplegable.</figcaption></figure>
+
+<h1>4. Tecnologías y su aplicación</h1>
+<h2>4.1 HTML5 y CSS3</h2>
+<p>Las páginas usan etiquetas semánticas (<code>header</code>, <code>nav</code>, <code>main</code>, <code>section</code>, <code>article</code>, <code>footer</code>), etiquetas <code>label</code> asociadas a cada campo, atributos <code>aria</code> y un enlace para saltar al contenido, con el fin de mejorar la accesibilidad. En CSS3 se emplearon variables personalizadas (para el tema claro y oscuro), Grid, Flexbox, transiciones y la consulta <code>prefers-reduced-motion</code> para respetar a quien prefiere menos animación.</p>
+
+<h2>4.2 JavaScript</h2>
+<p>El archivo <code>js/main.js</code> contiene el código sin jQuery:</p>
+<table class="t">
+<tr><th style="width:30%">Requisito</th><th>Implementación</th></tr>
+<tr><td>Fecha y hora actual</td><td>Un objeto <code>Date</code> y <code>setInterval</code> actualizan cada segundo la barra superior con el formato en español de México.</td></tr>
+<tr><td>Validación del formulario</td><td>Reglas por campo con expresiones regulares, mensajes de error individuales, contador de caracteres y bloqueo del envío si hay errores.</td></tr>
+<tr><td>Botón «Ir arriba»</td><td>Aparece tras bajar 300 px y regresa al inicio con desplazamiento suave.</td></tr>
+<tr><td>Funcionalidad adicional</td><td>Tema oscuro guardado en <code>localStorage</code>, indicador de conexión (en línea o sin conexión), cotizador indicativo y simulación de entrega.</td></tr>
+</table>
+
+<h2>4.3 jQuery</h2>
+<p>El archivo <code>js/jquery-app.js</code> concentra el uso de jQuery:</p>
+<ul>
+<li><strong>Eventos:</strong> <code>on("click")</code> para el menú móvil, los filtros y los botones; delegación de eventos en el acordeón y en la simulación de entrega; <code>on("input")</code> en el buscador.</li>
+<li><strong>Efectos:</strong> <code>fadeIn</code> y <code>fadeOut</code> en el filtrado, <code>slideToggle</code> en el acordeón, <code>slideDown</code> en el pase de salida y <code>animate</code> en los contadores de cifras.</li>
+<li><strong>Manipulación del DOM:</strong> <code>toggleClass</code>, <code>attr</code>, <code>text</code>, <code>css</code> y <code>prop</code> para actualizar el estado de cada fase, el resultado del cotizador y los mensajes.</li>
+</ul>
+
+<h2>4.4 Plugins de jQuery</h2>
+<table class="t">
+<tr><th style="width:24%">Plugin</th><th style="width:26%">Dónde se usa</th><th>Configuración</th></tr>
+<tr><td>bxSlider 4.2.17</td><td>Carrusel de Inicio y carrusel de «problemas que resuelve».</td><td>Reproducción automática, transición con desvanecimiento, indicadores y pausa al pasar el cursor.</td></tr>
+<tr><td>Magnific Popup 1.1.0</td><td>Galería de Nosotros.</td><td>Ventana emergente de imágenes con flechas, contador y títulos.</td></tr>
+</table>
+<pre>$(".slider-hero").bxSlider({
+  auto: true, pause: 5000, mode: "fade", speed: 800,
+  pager: true, controls: true, autoHover: true
+});
+$("#galeria").magnificPopup({
+  delegate: "a", type: "image",
+  gallery: { enabled: true, tCounter: "%curr% de %total%" }
+});</pre>
+<figure class="f"><img src="capturas/lightbox.png" alt=""><figcaption>Figura 3. Galería con Magnific Popup.</figcaption></figure>
+<p>Las librerías (jQuery, bxSlider y Magnific Popup) están guardadas dentro del repositorio, en la carpeta <code>vendor</code>, por lo que el sitio no depende de redes de distribución externas para su funcionamiento básico.</p>
+
+<h1>5. Funcionalidades destacadas</h1>
+<h2>5.1 Filtro y buscador de funcionalidades</h2>
+<p>La página de Funcionalidades presenta los 17 requisitos funcionales de KandoFlow, agrupados en cinco áreas. Con jQuery se filtra por área y se busca por texto en tiempo real; si no hay coincidencias, se muestra un mensaje.</p>
+<figure class="f"><img src="capturas/func.png" alt=""><figcaption>Figura 4. Funcionalidades con filtros por área y buscador.</figcaption></figure>
+
+<h2>5.2 Cotizador indicativo</h2>
+<p>Implementa la convención financiera definida en la especificación de requisitos del proyecto (RF-01): el capital es el precio multiplicado por uno menos el enganche; la tasa mensual es la tasa anual entre 12; y la cuota es <em>P·i / (1 − (1 + i)<sup>−n</sup>)</em>, o <em>P / n</em> si la tasa es cero. Valida que el enganche esté entre 10 % y 80 %, que el plazo sea 12, 24, 36, 48, 60 o 72 meses y que la tasa no sea negativa.</p>
+<pre>function calcularCuota(precio, enganchePct, n, tasaPct) {
+  var capital = precio * (1 - enganchePct / 100), i = tasaPct / 100 / 12;
+  var cuota = i === 0 ? capital / n : capital * i / (1 - Math.pow(1 + i, -n));
+  return { capital: capital, cuota: Math.round(cuota * 100) / 100 };
+}</pre>
+<p>Con los datos de prueba de la especificación (precio de $450,000, enganche de 25 %, plazo de 48 meses y tasa de 12 %), el sitio calcula un capital de $337,500.00 y una cuota de $8,887.67, igual al valor esperado en el documento; con tasa de 0 % calcula $7,031.25. Además, permite preparar la propuesta en WhatsApp con el texto precargado (RF-02); el envío lo confirma la persona.</p>
+<div class="note">El cálculo es ilustrativo: la tasa y las reglas de la financiera aún deben confirmarse con la usuaria objetivo, como se indica en la documentación del proyecto.</div>
+<figure class="f"><img src="capturas/cotizador.png" alt=""><figcaption>Figura 5. Cotizador indicativo con validación de datos.</figcaption></figure>
+
+<h2>5.3 Simulación de entrega en cinco fases</h2>
+<p>Representa la regla de que una fase posterior permanece bloqueada mientras no se complete la anterior (RF-06). Al completar la quinta fase se habilita el pase de salida. Las fases (preparación, firma, inspección, orientación y recepción) son una simulación del modelo de trabajo del proyecto.</p>
+<figure class="f"><img src="capturas/entrega.png" alt=""><figcaption>Figura 6. Simulación de entrega con fases bloqueadas y progreso.</figcaption></figure>
+
+<h1>6. Formulario y mapa</h1>
+<h2>6.1 Formulario de contacto</h2>
+<p>El formulario solicita nombre, correo electrónico, asunto y mensaje, y se valida con JavaScript antes de «enviarse».</p>
+<table class="t">
+<tr><th style="width:20%">Campo</th><th>Regla de validación</th></tr>
+<tr><td>Nombre</td><td>Mínimo 3 caracteres; solo letras, espacios y signos comunes de nombres.</td></tr>
+<tr><td>Correo</td><td>No vacío y con formato de correo válido.</td></tr>
+<tr><td>Asunto</td><td>Mínimo 5 caracteres.</td></tr>
+<tr><td>Mensaje</td><td>Entre 10 y 500 caracteres, con contador en pantalla.</td></tr>
+</table>
+<p>Cada campo muestra su propio mensaje de error y cambia de color (rojo si es inválido, verde si es válido). Si hay errores, se bloquea el envío y el cursor regresa al primer campo con problemas. Con datos correctos se muestra una confirmación. El envío es una simulación, porque el sitio no tiene servidor.</p>
+<figure class="m"><img style="max-width:42%" src="capturas/contacto-formulario.png" alt=""><figcaption>Figura 7. Formulario de contacto mostrando los errores de validación.</figcaption></figure>
+
+<h2>6.2 Mapa interactivo</h2>
+<p>La página de Contacto incorpora un mapa de Google Maps incrustado que muestra la agencia Mazda Zapata Querétaro, en el Boulevard Bernardo Quintana 588, colonia San Pedrito Peñuelas, 76148, Santiago de Querétaro. El mapa permite hacer zoom, desplazarse y abrirse en Google Maps mediante un enlace. Se eligió esta solución porque los servidores públicos de mosaicos de OpenStreetMap y de CARTO rechazan el uso desde archivos locales o sin clave de acceso, como se comprobó durante las pruebas.</p>
+<pre>&lt;iframe id="mapa" title="Mapa interactivo con la ubicación de Mazda Zapata Querétaro"
+  loading="lazy" allowfullscreen
+  src="https://maps.google.com/maps?q=Mazda+Zapata+Quer%C3%A9taro,+Blvd.+Bernardo+Quintana+588&amp;z=16&amp;output=embed"&gt;&lt;/iframe&gt;</pre>
+
+<h1>7. Organización del repositorio en GitHub</h1>
+<p>El proyecto se desarrolló en el repositorio de GitHub <a href="https://github.com/James-gosling/Kando-flow">James-gosling/Kando-flow</a>, dentro de la carpeta <code>sitio-web</code>, junto con la documentación previa de KandoFlow (carpeta <code>docs</code>). El trabajo se hizo en una rama de desarrollo, con commits descriptivos por etapa, y se integró a la rama principal mediante <em>pull requests</em>.</p>
+<pre>sitio-web/
+├── index.html · nosotros.html · funcionalidades.html · contacto.html
+├── css/styles.css          # estilos, variables, tema oscuro y responsivo
+├── js/main.js              # JavaScript: reloj, validación, tema, «ir arriba»
+├── js/jquery-app.js        # jQuery: eventos, efectos, DOM y plugins
+├── img/                    # ilustraciones SVG propias
+├── vendor/                 # jQuery, bxSlider y Magnific Popup
+├── docs/                   # documento institucional y capturas
+└── README.md</pre>
+<p><strong>Historial de commits.</strong> Las etapas principales quedaron registradas como commits separados: librerías locales; identidad visual y estilos; páginas HTML; JavaScript y jQuery; documentación; eliminación de menciones personales del sitio; corrección del mapa y cambio al mapa de Google Maps.</p>
+<p><strong>Video.</strong> El funcionamiento del sitio, el código principal y el repositorio se explican en el video de la entrega: <a href="https://youtu.be/n128mnoHusg">https://youtu.be/n128mnoHusg</a>.</p>
+
+<h1>8. Conclusiones</h1>
+<p>El sitio cumple los requisitos de la actividad: cuatro páginas con navegación y pie de página, diseño responsivo, validación del formulario con JavaScript, fecha y hora, botón «Ir arriba», una funcionalidad adicional, uso de jQuery en eventos, efectos y manipulación del DOM, dos plugins de jQuery, un mapa interactivo y un repositorio organizado en GitHub.</p>
+<p>Durante el desarrollo se aprendieron varias lecciones prácticas. La primera es que depender de servicios externos tiene riesgos: los mosaicos gratuitos de mapas dejaron de funcionar al abrir el sitio localmente, lo que obligó a cambiar de proveedor. La segunda es que reutilizar una documentación de requisitos existente permitió validar el cotizador contra un resultado esperado conocido. La tercera es que la validación del lado del cliente mejora la experiencia, pero no sustituye a la validación en un servidor cuando el sistema sea real.</p>
+<p>Como trabajo futuro, se podría conectar el formulario a un servicio de correo, convertir el cotizador y la simulación de entrega en la aplicación real descrita en la propuesta (con persistencia local y control de acceso por rol) y agregar pruebas automatizadas.</p>
+
+<h1 class="pb">9. Referencias</h1>
+<p class="ref">Chacon, S. y Straub, B. (2014). <em>Pro Git</em> (2.ª ed.). Apress. <a href="https://git-scm.com/book/es/v2">https://git-scm.com/book/es/v2</a></p>
+<p class="ref">Duckett, J. (2014). <em>JavaScript and jQuery: Interactive front-end web development</em>. Wiley.</p>
+<p class="ref">Flanagan, D. (2020). <em>JavaScript: The definitive guide</em> (7.ª ed.). O'Reilly Media.</p>
+<p class="ref">GitHub. (s. f.). <em>Documentación de GitHub</em>. <a href="https://docs.github.com/es">https://docs.github.com/es</a></p>
+<p class="ref">Google. (s. f.). <em>Cómo compartir o incorporar un mapa</em>. Ayuda de Google Maps. <a href="https://support.google.com/maps/answer/144361">https://support.google.com/maps/answer/144361</a></p>
+<p class="ref">Marcotte, E. (2011). <em>Responsive web design</em>. A Book Apart.</p>
+<p class="ref">Mozilla. (s. f.). <em>MDN Web Docs: HTML, CSS y JavaScript</em>. <a href="https://developer.mozilla.org/es/">https://developer.mozilla.org/es/</a></p>
+<p class="ref">OpenJS Foundation. (s. f.). <em>jQuery API documentation</em>. <a href="https://api.jquery.com/">https://api.jquery.com/</a></p>
+<p class="ref">Semenov, D. (s. f.). <em>Magnific Popup: Responsive lightbox and dialog script</em>. <a href="https://dimsemenov.com/plugins/magnific-popup/">https://dimsemenov.com/plugins/magnific-popup/</a></p>
+<p class="ref">Wanderski, S. (s. f.). <em>bxSlider: The responsive jQuery content slider</em>. <a href="https://bxslider.com/">https://bxslider.com/</a></p>
+<p class="ref">World Wide Web Consortium. (2023). <em>Web Content Accessibility Guidelines (WCAG) 2.2</em>. <a href="https://www.w3.org/TR/WCAG22/">https://www.w3.org/TR/WCAG22/</a></p>
+<p class="ref">Valdespino Vértiz, R. (2026). <em>KandoFlow: visión del producto, especificación de requisitos y prototipo</em> [Documentación del proyecto, Ingeniería de Software I]. Repositorio James-gosling/Kando-flow, carpeta <code>docs</code>. <a href="https://github.com/James-gosling/Kando-flow/tree/main/docs">https://github.com/James-gosling/Kando-flow/tree/main/docs</a></p>
+</body></html>
