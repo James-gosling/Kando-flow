@@ -129,9 +129,11 @@
       // Mazda Zapata Querétaro, Blvd. Bernardo Quintana 588 (coordenadas aproximadas de directorios en línea).
       var posicion = [20.6178, -100.4031];
       var mapa = L.map("mapa").setView(posicion, 16);
-      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        maxZoom: 19,
-        attribution: "&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a>"
+      // Mosaicos CARTO (datos de OpenStreetMap): funcionan también al abrir el archivo con doble clic (file://),
+      // cosa que los servidores de OpenStreetMap bloquean por política de uso.
+      L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
+        subdomains: "abcd", maxZoom: 19,
+        attribution: "&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> &copy; <a href='https://carto.com/attributions'>CARTO</a>"
       }).addTo(mapa);
       L.marker(posicion).addTo(mapa)
         .bindPopup("<strong>Mazda Zapata Querétaro</strong><br>Blvd. Bernardo Quintana 588, San Pedrito Peñuelas").openPopup();
