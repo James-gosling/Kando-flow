@@ -141,3 +141,4 @@ $(function () {
   });
   $("#reiniciar-entrega").on("click", function () { fasesHechas = 0; pintarEntrega(0); });
 });
+
