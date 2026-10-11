@@ -1,4 +1,4 @@
-# KandoFlow — Sitio web
+# KandoFlow — Actividad 9 :  Sitio web interactivo utilizando un plugin de jQuery
 
 Sitio web responsivo que presenta **KandoFlow**, la propuesta de estación de trabajo móvil para la atención comercial Mazda (cotizaciones, expedientes de crédito y entrega vehicular). Proyecto final del curso de desarrollo web: HTML5, CSS3, JavaScript, jQuery y plugins.
 
@@ -38,3 +38,4 @@ Abre `index.html` en el navegador, o desde esta carpeta: `python3 -m http.server
 
 ## Créditos
 Código e ilustraciones propios. Librerías: jQuery (MIT), bxSlider (MIT), Magnific Popup (MIT), mapa de Google Maps.
+
