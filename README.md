@@ -1,7 +1,6 @@
 # KandoFlow
-
-**Evaluación parcial · Requisitos y prototipo — Unidad 2**  
-**Autor:** Rodrigo Valdespino Vértiz · **Dupla:** Emiliano Cabañas Prieto  
+ 
+**Autor:** Rodrigo Valdespino Vértiz · 
 **Versión documental:** 2.1 (adenda de acceso) · **Actualización:** 30 de septiembre de 2026
 
 KandoFlow propone una estación de trabajo móvil para apoyar la atención comercial Mazda: cotizaciones indicativas, expedientes de crédito y entrega vehicular de cinco fases. La solución se plantea como PWA con operación local y respaldo corporativo.
