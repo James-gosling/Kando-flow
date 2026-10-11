@@ -6,7 +6,6 @@
   <title>Contacto | KandoFlow</title>
   <meta name="description" content="Contacta al equipo de KandoFlow: formulario validado, enlaces del proyecto y mapa de ubicación.">
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
-  <link rel="stylesheet" href="vendor/leaflet.css">
   <link rel="stylesheet" href="css/styles.css">
   <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 </head>
@@ -58,7 +57,8 @@
               <li>🎨 <a href="https://factor-yam-65024850.figma.site" target="_blank" rel="noopener">Prototipo web publicado</a></li>
               <li>📍 Mazda Zapata Querétaro — Blvd. Bernardo Quintana 588, Col. San Pedrito Peñuelas, 76148 Querétaro, Qro.</li>
             </ul>
-            <div id="mapa" role="region" aria-label="Mapa interactivo con la ubicación de Mazda Zapata Querétaro"></div>
+            <iframe id="mapa" title="Mapa interactivo con la ubicación de Mazda Zapata Querétaro" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen src="https://maps.google.com/maps?q=Mazda+Zapata+Quer%C3%A9taro,+Blvd.+Bernardo+Quintana+588,+Quer%C3%A9taro&z=16&output=embed"></iframe>
+            <p style="margin:10px 0 0"><a href="https://www.google.com/maps/search/?api=1&query=Mazda+Zapata+Quer%C3%A9taro+Blvd.+Bernardo+Quintana+588" target="_blank" rel="noopener">Abrir en Google Maps ↗</a></p>
           </div>
         </div>
       </div>
@@ -78,7 +78,6 @@
   <button id="btn-top" type="button" aria-label="Ir arriba" title="Ir arriba">↑</button>
 
   <script src="vendor/jquery.min.js"></script>
-  <script src="vendor/leaflet.js"></script>
   <script src="js/main.js"></script>
   <script src="js/jquery-app.js"></script>
 </body>
