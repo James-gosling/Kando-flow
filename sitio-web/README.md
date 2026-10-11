@@ -18,7 +18,7 @@ Sitio web responsivo que presenta **KandoFlow**, la propuesta de estación de tr
 - **Funcionalidad adicional:** cotizador indicativo (fórmula de RF-01, oráculo 8,887.67 MXN), propuesta por WhatsApp (RF-02) y simulación de entrega por fases (RF-06).
 - **jQuery (`js/jquery-app.js`):** eventos, efectos (`fade`, `slideToggle`, `animate`) y manipulación del DOM.
 - **Plugins:** [bxSlider](https://bxslider.com/) y [Magnific Popup](https://dimsemenov.com/plugins/magnific-popup/).
-- **Mapa:** [Leaflet](https://leafletjs.com/) con mosaicos CARTO y datos de OpenStreetMap (requiere conexión). Marca Mazda Zapata Querétaro (Blvd. Bernardo Quintana 588); las coordenadas son aproximadas y se editan en `js/main.js`.
+- **Mapa:** mapa interactivo de Google Maps incrustado (iframe, sin clave de API) con la ubicación de Mazda Zapata Querétaro, Blvd. Bernardo Quintana 588. Requiere conexión.
 - **Formulario:** nombre, correo, asunto y mensaje validados con JavaScript.
 
 ## Estructura
@@ -29,7 +29,7 @@ sitio-web/
 ├── js/main.js          # JavaScript puro
 ├── js/jquery-app.js    # jQuery + plugins
 ├── img/                # ilustraciones SVG propias (conceptos de pantalla)
-├── vendor/             # jQuery, bxSlider, Magnific Popup, Leaflet (locales)
+├── vendor/             # jQuery, bxSlider, Magnific Popup (locales)
 └── docs/               # informe PDF y capturas
 ```
 
@@ -37,4 +37,4 @@ sitio-web/
 Abre `index.html` en el navegador, o desde esta carpeta: `python3 -m http.server 8000` y visita <http://localhost:8000>.
 
 ## Créditos
-Código e ilustraciones propios. Librerías: jQuery (MIT), bxSlider (MIT), Magnific Popup (MIT), Leaflet (BSD-2); mapa © colaboradores de OpenStreetMap.
+Código e ilustraciones propios. Librerías: jQuery (MIT), bxSlider (MIT), Magnific Popup (MIT), mapa de Google Maps.

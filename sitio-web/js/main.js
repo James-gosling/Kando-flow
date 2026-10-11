@@ -1,5 +1,5 @@
 /* KandoFlow — JavaScript puro (sin jQuery)
-   Fecha y hora, estado de conexión, tema oscuro, botón "Ir arriba", validación del formulario y mapa. */
+   Fecha y hora, estado de conexión, tema oscuro, botón "Ir arriba", y validación del formulario. */
 (function () {
   "use strict";
 
@@ -118,25 +118,5 @@
       contador.textContent = "0";
       form.querySelectorAll(".form-group").forEach(function (g) { g.classList.remove("valid", "invalid"); });
     });
-  }
-
-  /* ---------- 5. Mapa interactivo (Leaflet + OpenStreetMap) ---------- */
-  var contenedorMapa = document.getElementById("mapa");
-  if (contenedorMapa) {
-    if (typeof L === "undefined") {
-      contenedorMapa.textContent = "No se pudo cargar el mapa.";
-    } else {
-      // Mazda Zapata Querétaro, Blvd. Bernardo Quintana 588 (coordenadas aproximadas de directorios en línea).
-      var posicion = [20.6178, -100.4031];
-      var mapa = L.map("mapa").setView(posicion, 16);
-      // Mosaicos CARTO (datos de OpenStreetMap): funcionan también al abrir el archivo con doble clic (file://),
-      // cosa que los servidores de OpenStreetMap bloquean por política de uso.
-      L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
-        subdomains: "abcd", maxZoom: 19,
-        attribution: "&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> &copy; <a href='https://carto.com/attributions'>CARTO</a>"
-      }).addTo(mapa);
-      L.marker(posicion).addTo(mapa)
-        .bindPopup("<strong>Mazda Zapata Querétaro</strong><br>Blvd. Bernardo Quintana 588, San Pedrito Peñuelas").openPopup();
-    }
   }
 })();
