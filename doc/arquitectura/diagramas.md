@@ -26,7 +26,7 @@ flowchart TD
     sistema -->|prepara propuesta para enviar| wa
     sistema -->|respalda paquetes y bitácora| workspace
 
-    style sistema fill:#fff8f4,stroke:#ff5d00,stroke-width:2px
+    style sistema fill:#fff8f4,stroke:#ff5d00,stroke-width:2px,color:#111111
 ```
 
 **Correspondencia:** CU-01 a CU-12; RF-02, RF-08, RF-15 y RF-17. La interacción del cliente está acotada a la vista temporal y exige reautenticación de la asesora para recuperar la operación.
@@ -54,7 +54,7 @@ flowchart TD
     app -->|sincroniza paquete autorizado| drive
     app -->|sincroniza registro finalizado| sheets
 
-    style app fill:#fff8f4,stroke:#ff5d00,stroke-width:2px
+    style app fill:#fff8f4,stroke:#ff5d00,stroke-width:2px,color:#111111
 ```
 
 **Correspondencia:** visión del producto; RF-02, RF-08, RF-17, RNF-03, RNF-04 y RNF-07. La sincronización debe dejar el trabajo pendiente cuando no hay conexión; no se da por realizada solo porque la interfaz muestre ese estado.
@@ -89,7 +89,7 @@ flowchart TD
     entrega --> datos
     respaldo -->|sincroniza mediante adaptadores| externos
 
-    style entrega fill:#fff8f4,stroke:#ff5d00,stroke-width:2px
+    style entrega fill:#fff8f4,stroke:#ff5d00,stroke-width:2px,color:#111111
 ```
 
 **Correspondencia:** RF-01 a RF-17, en especial RF-06, RF-07, RF-08, RF-15 y RF-17. La flecha hacia Persistencia representa una interfaz común de almacenamiento, no permisos para consultar datos privados de otros módulos.
@@ -137,7 +137,7 @@ flowchart TD
     autentica -->|Sí| pase
     pase --> fin
 
-    style pase fill:#fff8f4,stroke:#ff5d00,stroke-width:2px
+    style pase fill:#fff8f4,stroke:#ff5d00,stroke-width:2px,color:#111111
 ```
 
 **Correspondencia:** CU-05, CU-06, RF-06, RF-07, RF-12 y RF-15. El pase es ficticio y no autoriza una salida real de agencia.
