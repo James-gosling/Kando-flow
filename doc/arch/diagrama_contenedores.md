@@ -1,19 +1,23 @@
+## 2. Diagrama de Contenedores (Nivel 2 C4)
+
+```mermaid
 flowchart TD
-    U([Asesora / Administrador])
+    usuario([Asesora o Administrador])
 
-    subgraph Dispositivo_Movil["Dispositivo Local (PWA en Navegador)"]
-        SPA["Aplicación Web Progresiva (PWA)\n[React + TypeScript + Vite]\nInterfaz de usuario y motor de reglas de negocio"]
-        LOCAL_DB[("Almacén de Datos Local\n[IndexedDB]\nPersistencia offline, estados de entrega y caché")]
+    subgraph kando[KandoFlow - Sistema Propuesto]
+        app[Aplicación Web PWA - React, TypeScript y Vite]
+        local[(Almacén Local - IndexedDB)]
     end
 
-    subgraph Servicios_Externos["Servicios Externos Corporativos"]
-        EXT_WA["WhatsApp Web / App Externa\n[Deep Link / URI Protocol]"]
-        EXT_DRIVE["Google Drive\n[HTTPS / REST API v3]"]
-        EXT_SHEETS["Google Sheets\n[HTTPS / REST API v4]"]
-    end
+    wa[WhatsApp - Servicio Externo]
+    drive[Google Drive - API REST v3]
+    sheets[Google Sheets - API REST v4]
 
-    U -->|Operación directa en pantalla táctil / navegador| SPA
-    SPA -->|Lectura y escritura transaccional asíncrona (IndexedDB API)| LOCAL_DB
-    SPA -->|Apertura de URI scheme con mensaje precargado ([https://api.whatsapp.com](https://api.whatsapp.com))| EXT_WA
-    SPA -->|Sincronización de expedientes y pases PDF (OAuth 2.0 + JSON/HTTPS)| EXT_DRIVE
-    SPA -->|Actualización de bitácora comercial y estados (OAuth 2.0 + JSON/HTTPS)| EXT_SHEETS
+    usuario -->|Usa en el navegador HTTPS| app
+    app -->|Lee y escribe datos locales IndexedDB API| local
+    app -->|Abre mensaje preparado Deep Link URI| wa
+    app -->|Sincroniza paquete autorizado JSON sobre HTTPS| drive
+    app -->|Sincroniza registro finalizado JSON sobre HTTPS| sheets
+
+    style app fill:#fff8f4,stroke:#ff5d00,stroke-width:2px,color:#111111
+```
