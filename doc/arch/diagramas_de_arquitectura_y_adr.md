@@ -1,63 +1,105 @@
-Registro de Decisión de Arquitectura (ADR)
+Diagramas Mermaid de KandoFlow (Modelo C4)
 
 Ingeniería de Software I · SIS3407 · Unidad 3
 
 Alumno: Rodrigo Valdespino Vértiz
 
-Proyecto: KandoFlow
+Proyecto: KandoFlow (Estación de trabajo comercial y entrega vehicular Mazda)
 
 Fecha: 29 de octubre de 2026
 
-1. Título
+Este documento contiene las tres vistas arquitectónicas del modelo C4 para KandoFlow. Los bloques están optimizados para el renderizador nativo de Mermaid en GitHub.
 
-ADR-001: Adopción de una arquitectura de Monolito Modular en una Aplicación Web Progresiva (PWA) con operación local (Offline-First) para KandoFlow.
+1. Diagrama de Contexto (Nivel 1 C4)
 
-2. Estado
+Representa a KandoFlow como una sola caja central, las personas que lo utilizan según su rol y los sistemas externos con los que intercambia información, sin especificar tecnologías internas.
 
-Aprobado.
+flowchart TD
+    asesora(["Asesora comercial"])
+    admin(["Administrador"])
+    cliente(["Cliente en vista temporal"])
 
-3. Contexto
+    sistema["KandoFlow<br/>Estación de trabajo comercial y entrega vehicular"]
 
-KandoFlow es una estación de trabajo móvil diseñada para apoyar a las asesoras comerciales de una agencia automotriz Mazda en tres procesos principales: elaboración de cotizaciones indicativas, integración de expedientes de crédito y ejecución de la entrega vehicular dividida en cinco fases (CU-05), incluyendo el manejo de incidencias o daños (CU-06).
+    wa["WhatsApp<br/>Sistema externo de mensajería"]
+    workspace["Google Workspace<br/>Almacenamiento y hojas de cálculo corporativas"]
 
-En el entorno real de una agencia automotriz, el trabajo no ocurre únicamente en un escritorio con red estable; gran parte del recorrido sucede en piso de venta, sótanos de resguardo, patios de maniobras y bahías de entrega donde la señal Wi-Fi o de datos móviles es intermitente o nula. Si el sistema dependiera en tiempo real de un servidor remoto para avanzar entre las cinco fases de inspección, registrar la firma de conformidad del cliente en la vista temporal o emitir el pase de salida, cualquier corte de red detendría la entrega física del vehículo frente al cliente.
+    asesora -->|Cotiza, integra expedientes y ejecuta entregas| sistema
+    admin -->|Configura plantillas, roles y supervisa respaldos| sistema
+    cliente -->|Confirma recepción física o acuerdo en vista protegida| sistema
 
-Adicionalmente, el proyecto se encuentra en una etapa de diseño y validación funcional con un equipo reducido y sin presupuesto para mantener infraestructura compleja en la nube. Adoptar microservicios introduciría latencia de red, costos de servidores dedicados, orquestación distribuida y complejidad innecesaria. Por el contrario, programar un monolito tradicional sin fronteras internas provocaría que la lógica de cotizaciones, las reglas de bloqueo por incidencias en la entrega y el control de acceso por rol quedaran acoplados a las pantallas, dificultando su mantenimiento y pruebas.
+    sistema -->|Prepara texto de propuesta comercial para envío| wa
+    sistema -->|Respalda paquetes documentales y bitácora auditable| workspace
 
-4. Decisión
+    style sistema fill:#fff8f4,stroke:#ff5d00,stroke-width:2px,color:#111111
 
-Se decide diseñar e implementar KandoFlow bajo el patrón de Monolito Modular ejecutado como una PWA con persistencia local:
 
-Unidad única de despliegue: El sistema se construirá como una sola Aplicación Web Progresiva (React + TypeScript + Vite) que se instala y ejecuta directamente en el navegador del dispositivo móvil o tableta de la asesora comercial.
+Correspondencia: CU-01 a CU-12; RF-02, RF-08, RF-15 y RF-17. La participación del cliente ocurre únicamente dentro de una vista temporal controlada y exige la reautenticación de la asesora para retomar la sesión operativa.
 
-Modularidad interna por dominio de negocio: Dentro del mismo proyecto, el código se dividirá estrictamente en cuatro módulos independientes que reflejan el dominio de la agencia:
+2. Diagrama de Contenedores (Nivel 2 C4)
 
-Módulo de Atención Comercial: gestión de prospectos y cálculo de cotizaciones.
+Muestra las piezas de software que se ejecutan o despliegan por separado, detallando la tecnología de cada contenedor y cómo se comunican entre sí.
 
-Módulo de Expediente: carga documental y validación de requisitos de crédito.
+flowchart TD
+    usuario(["Asesora comercial o Administrador"])
 
-Módulo de Entrega Vehicular: control de agenda, checklist obligatorio de las cinco fases, evaluación de incidencias bloqueantes o con acuerdo, y emisión del pase de salida.
+    subgraph kando["Frontera del Sistema · KandoFlow en Dispositivo Móvil"]
+        pwa["Aplicación Web Progresiva - PWA<br/>Tecnología: React, TypeScript y Vite<br/>Interfaz adaptable, control de sesión y reglas de negocio"]
+        idb[("Almacén de Datos Local<br/>Tecnología: IndexedDB en Navegador<br/>Persistencia offline de prospectos, expedientes y entregas")]
+    end
 
-Módulo de Respaldo: administración de la cola de sincronización y adaptadores de salida.
+    wa_ext["WhatsApp Web / App<br/>Tecnología: Servicio externo"]
+    drive_ext["Google Drive<br/>Tecnología: Servicio Cloud externo"]
+    sheets_ext["Google Sheets<br/>Tecnología: Servicio Cloud externo"]
 
-Comunicación limpia entre módulos: Los módulos solo podrán interactuar mediante interfaces públicas bien definidas (por ejemplo, Entrega notifica a Respaldo cuando se emite un pase válido), prohibiendo que un módulo altere directamente el estado interno de otro.
+    usuario -->|Interactúa en el navegador vía HTTPS| pwa
+    pwa -->|Lee y escribe transacciones locales vía IndexedDB API| idb
+    pwa -->|Abre propuesta mediante enlace URI Scheme https| wa_ext
+    pwa -->|Sincroniza documentos y pases vía HTTPS REST API y OAuth 2.0| drive_ext
+    pwa -->|Registra bitácora finalizada vía HTTPS REST API y OAuth 2.0| sheets_ext
 
-Almacenamiento local primario y respaldo externo eventual: Toda la operación diaria se guardará primero en IndexedDB dentro del navegador. La comunicación hacia sistemas externos corporativos (Google Drive y Google Sheets) se realizará de forma asíncrona cuando el dispositivo cuente con conexión autorizada.
+    style pwa fill:#fff8f4,stroke:#ff5d00,stroke-width:2px,color:#111111
 
-5. Consecuencias
 
-Positivas
+Correspondencia: RF-02, RF-08, RF-17, RNF-03, RNF-04 y RNF-07. Cuando no hay conexión en el patio o bahía de entrega, la aplicación opera sobre IndexedDB y mantiene los respaldos en cola hasta recuperar conectividad.
 
-Operación ininterrumpida en bahía de entrega: La asesora puede completar las cinco fases de entrega, capturar acuerdos por incidencias, mostrar la vista temporal al cliente, reautenticarse y generar el pase de salida con respuesta inmediata y sin depender de internet.
+3. Diagrama de Componentes (Nivel 3 C4)
 
-Cero costo en servidores propios: Al ejecutarse en el dispositivo local y aprovechar herramientas corporativas ya contratadas (Google Workspace y WhatsApp), no se requiere pagar ni administrar servidores de backend o bases de datos en la nube.
+Desglosa el interior del contenedor principal (Aplicación Web Progresiva - PWA) donde viven las reglas de negocio, mostrando los módulos definidos y sus interacciones internas.
 
-Claridad y mantenibilidad del código: Las reglas críticas del negocio automotriz (como impedir la emisión del pase si existe un daño bloqueante o si falta un control obligatorio) viven aisladas en el módulo de Entrega, lo que facilita su auditoría y evita errores colaterales al modificar las cotizaciones o la interfaz.
+flowchart TB
+    ui["Interfaz de Usuario y Control de Acceso por Rol<br/>Vistas React y guardias de navegación"]
 
-Preparación para evolución futura: Si en una versión posterior la agencia decide conectar KandoFlow a un servidor central o DMS corporativo, los límites modulares permitirán extraer los módulos de dominio hacia una API backend sin tener que rediseñar las reglas de negocio.
+    subgraph pwa_box["Contenedor PWA · Módulos de Reglas de Negocio"]
+        comercial["Módulo Atención Comercial<br/>Registro de prospectos y cálculo de cotizaciones"]
+        expediente["Módulo Expediente<br/>Recepción documental y revisión de checklist"]
+        entrega["Módulo Entrega Vehicular<br/>Agenda, protocolo de 5 fases, incidencias y pase"]
+        respaldo["Módulo Respaldo<br/>Cola de sincronización offline y adaptadores"]
+        repo["Capa de Acceso a Datos Locales<br/>Repositorio e interfaz común hacia IndexedDB"]
+    end
 
-Negativas
+    local_db[("Almacén Local IndexedDB")]
+    google_cloud["Google Drive y Google Sheets"]
 
-Seguridad y resguardo en el dispositivo físico: Debido a que la información de prospectos, expedientes y entregas reside localmente en IndexedDB, un dispositivo desbloqueado o extraviado representa un riesgo. Esto obliga a implementar bloqueo de sesión, reautenticación obligatoria de la asesora tras el uso de la vista del cliente (RF-15) y cifrado local en la fase de construcción.
+    ui -->|Solicita cotización y alta de prospecto| comercial
+    ui -->|Adjunta y audita documentos| expediente
+    ui -->|Avanza fases, registra acuerdos y solicita pase| entrega
 
-Consistencia eventual de los respaldos: Los reportes en Google Sheets y los paquetes en Google Drive no se reflejarán en tiempo real mientras la asesora trabaje sin conexión en el patio; existirá una ventana de tiempo donde los datos más recientes solo estarán en el dispositivo hasta que se procese la cola de sincronización.
+    comercial -->|Provee identidad del prospecto| expediente
+    comercial -->|Transfiere datos de unidad y operación| entrega
+
+    expediente -->|Encola paquete documental validado| respaldo
+    entrega -->|Publica cierre de entrega y pase emitido| respaldo
+
+    comercial -->|Guarda y consulta vía interfaz| repo
+    expediente -->|Guarda y consulta vía interfaz| repo
+    entrega -->|Guarda y consulta vía interfaz| repo
+    respaldo -->|Lee y actualiza cola pendiente| repo
+
+    repo -->|Ejecuta transacciones locales| local_db
+    respaldo -->|Envía registros autorizados vía HTTPS REST| google_cloud
+
+    style entrega fill:#fff8f4,stroke:#ff5d00,stroke-width:2px,color:#111111
+
+
+Correspondencia: RF-01 a RF-17, con énfasis en RF-06, RF-07, RF-08, RF-15 y RF-17. Cada módulo encapsula sus reglas y se comunica mediante interfaces definidas sin leer directamente las tablas privadas de otro módulo.
