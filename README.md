@@ -13,6 +13,15 @@ KandoFlow propone una estación de trabajo móvil para apoyar la atención comer
 
 **[Sitio web de KandoFlow](sitio-web/README.md)** — sitio responsivo (HTML5, CSS3, JavaScript, jQuery, bxSlider, Magnific Popup y Leaflet) que presenta la propuesta; vive en la carpeta [`sitio-web/`](sitio-web).
 
+## Entrega final · Ingeniería de Software I
+
+- [Arquitectura C4 y modelos Mermaid](doc/arch/diagramas.md): contexto, contenedores, componentes, secuencia, clases y estados.
+- [ADR-001 · Monolito modular offline-first](doc/arch/adr-001-monolito-modular-offline-first.md): decisión arquitectónica numerada, alternativas y consecuencias negativas.
+- [SC-001 · Alertas preventivas de vencimiento documental](doc/cambios/sc-001-alertas-vencimiento-documental.md): solicitud de cambio ratificada por la dupla revisora Emiliano Cabañas Prieto.
+- [AI-001 · Análisis de impacto de SC-001](doc/cambios/ai-001-alertas-vencimiento-documental.md): impactos directos e indirectos, alternativas, estimación y recomendación de aplazamiento.
+
+**Alcance:** los modelos y la estimación son documentación de diseño, no resultados de una aplicación de producción implementada.
+
 ## Entregables y orden de lectura
 
 | Entregable | Enlace |
